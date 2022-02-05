@@ -20,12 +20,12 @@ pm_start_text: |
   ✪ Hit /help to see my available commands.
    
 group_start_text: |
-  *👋🏻 Hi Darling, I'm Siesta Robot!*
+  *👋🏻 Hi Darling, I'm Boa Hancock Robot!*
   
   *Started active since :* `{}`
 
 pm_about_text: |
-  ✺ Hey Darling I'm *Siesta Robot*, a powerful group management bot built to help you manage your group easily. ✺
+  ✺ Hey Darling I'm *Boa Hancock Robot*, a powerful group management bot built to help you manage your group easily. ✺
 
   ✪ I can restrict users.
   ✪ I can greet users with customizable welcome messages and even set a group's rules.
@@ -34,8 +34,8 @@ pm_about_text: |
   ✪ I have a note keeping system, blacklists, and even predetermined replies on certain keywords.
   ✪ I check for admins' permissions before executing any command and more stuffs
 
-  _Siesta's licensed under the GNU General Public License v3.0_
-  Click on button bellow to get basic help for Siesta Robot.
+  _Boa licensed under the GNU General Public License v3.0_
+  Click on button bellow to get basic help for Boa Hancock Robot.
 pm_about_admin_text: |
   *✺ Let's make your group bit effective now ✺*
 
@@ -54,13 +54,13 @@ pm_about_notes_text: |
   ✪ You can save message/media/audio or anything as notes to get a note simply use # at the beginning of a word
   ✪ You can also set buttons for notes and filters (refer help menu)
 pm_about_support_text: |
-  *✺ Siesta Robot support chats ✺*
+  *✺  Boa Hancock Robot support chats ✺*
 
-  Join My Support Group/Channel for see or report a problem on Siesta.
+  Join My Support Group/Channel for see or report a problem on Boa Support.
 pm_about_credit_text: |
-  *✺ Credis for Siesta ✺*
+  *✺ Credis for Boa Hancock ✺*
 
-  Here Developers Making And Give Inspiration For Made The Siesta Robot
+  Here Developers Making And Give Inspiration For Made The Boa Robot
 pm_help_text: |
   *✺ Click on the button bellow to get description about specifics command. ✺*
 pm_help_module_text: "Here is the help for the *{}* module :\n\n"
@@ -89,7 +89,7 @@ notes_button: "Notes"
 source_button: "Source Code"
 help_button: "Get Help"
 back_button: "Go back"
-about_button: "About Siesta Robot"
+about_button: "About Boa Hancock Robot"
 inline_button: "Try inline!​​"
 
 # MODULES
@@ -248,7 +248,7 @@ blacklist_help: |
 chatbot_help: |
     ──「 Chatbot AI 」──
 
-    Siesta AI is the only ai system which can detect & reply upto 200 language's
+    Boa Hancock AI is the only ai system which can detect & reply upto 200 language's
 
     ❂ /chatbot [ON/OFF]: Enables and disables AI Chat mode.
     ❂ /chatbot EN : Enables English only chatbot.
@@ -559,7 +559,7 @@ info_and_afk_help: |
       - brb <reason>: Same as the afk command, but not a command. 
       
     *What is that health thingy?*
-    Come and see [HP System explained](https://t.me/KennedyProject/44)
+    Come and see [HP System explained](https://t.me/darlinsz/2)
 locks_help: |
     ──「 Locks 」──
 
@@ -663,9 +663,9 @@ search_help: |
     ❂ /github <username>*:* Get information about a GitHub user.
     ❂ /country <country name>*:* Gathering info about given country
     ❂ /imdb <Movie name>*:* Get full info about a movie with imdb.com
-    ❂ Siesta <query>*:* Siesta answers the query
+    ❂ Boa Hancock <query>*:* Siesta answers the query
 
-    💡 Ex : `Siesta where is Japan?`
+    💡 Ex : `Boa where is Japan?`
 stickers_help: |
     ──「 Stickers 」──
 
