@@ -31,17 +31,17 @@
       "TOKEN": {
          "description": "Your bot token. Get one from @BotFather duh",
          "required": true,
-         "value": ""
+         "value": "5276474965:AAFav-EqWxsQ0XhUI7YcPfHXb1yg-ij4y_A"
       },
       "API_ID": {
          "description": "Get API_ID from my.telegram.org, used for telethon based modules.",
          "required": true,
-         "value": ""
+         "value": "8276637"
       },
       "API_HASH": {
          "description": "Get API_HASH from my.telegram.org, used for telethon based modules.",
          "required": true,
-         "value": ""
+         "value": "c412d38a4ebcc2b32621a5c2be276d13"
       },    
       "SQLALCHEMY_DATABASE_URI": {
          "description": "Your postgres sql db, empty this field if you dont have one.",
@@ -51,13 +51,13 @@
       "OWNER_ID": {
          "description": "Your user ID as an integer.",
          "required": true,
-         "value": "945137470"
+         "value": "2034641799"
      },
 
       "STRING_SESSION": {
          "description": "Fill with telethon string session.",
          "required": true,
-         "value": "" 
+         "value": "1BVtsOLYBuxe7zGTAMSE4_-dCB-jbyKfBkAF6bJyqUU8Ul9K5SUNBZJynOwLkh93CN6YyZ66zlGU5UucEUkE7XLpthuQLTEwdWiTt5WG5Wnq9pl8LwMeSGp5Yv-GJKjWvAybVGQNUu8oAxWoFINqYAKtUv5rfKRTrC2f8G-YjVpeAJo2jqJkMpHBvrYhuh-SNX-7A8y96nEfewl-Zay1P3L7DLf3SgWJDelfTYaXWM3LCn2M5xFbmk69f8vwY7SLXV-EA1xeZdRdHwP0vnWHTii1TuTdufhlAjASVtz_lYYSSQdTCJ7CPC0pIqqwXVaA7Zhgy7vMQHYBP26bPeeDQgSbSTb1ke3s=" 
       },
       "HEROKU_API_KEY": {
         "description": "Your Heroku API key, get it from 'https://dashboard.heroku.com/account'",
@@ -69,22 +69,22 @@
       },
       "BOT_USERNAME": {
          "description": "username of your bot without the @",
-         "value": "siestaxbot"
+         "value": ""
       },
 
       "BOT_ID": {
          "description": "to get your bot_id using other bot or userbot",
-         "value": ""
+         "value": "5276474965"
       },
 
       "OWNER_USERNAME": {
          "description": "Your username without the @",
-         "value": "saint_foire"
+         "value": "zerohisoka"
       },
       "SUPPORT_CHAT": {
          "description": "Your Telegram support group chat username where your users will go and bother you with shit But be like: MyGroupChatUsernameBlah. If this ever points to masha support than consider you made an enemy.",
          "required": true,
-         "value": "machinaxsupport"
+         "value": "straydogs"
       },
       "MONGO_DB_URI": {
          "description": "Required for database connections.",
