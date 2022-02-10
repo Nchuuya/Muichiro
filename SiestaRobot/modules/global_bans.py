@@ -164,7 +164,7 @@ def gban(update: Update, context: CallbackContext):
 
         return
 
-    message.reply_text("matte kudasai")
+    message.reply_text("On It!")
 
     start_time = time.time()
     datetime_fmt = "%Y-%m-%dT%H:%M"
