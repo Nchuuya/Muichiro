@@ -113,16 +113,16 @@ async def hmm(client, message):
         test = test.replace("32", "16")
         test = test.replace("@saint_foire is my husband.", "I'm single.")
         test = test.replace("My husband is @zerohisoka", "I'm single.")
-        test = test.replace("@machinaxsupport", "Siestabot.ai")
-        test = test.replace("I live in @machinaxsupport.", "I live in San Francisco, California.")
-        test = test.replace("I was created by @saint_foire", "I made myself")
-        test = test.replace(
-            "Hello there I am Siesta...nice to meet u",
-            "Hi, my friend! Do you want me to tell you a joke?")
-        test = test.replace("@saint_foire is my owner", "Have the control right.")
-        test = test.replace(
-            "Hi, My name is Siesta Nice to meet you.",
-            "Hi, my friend, what can I do for you today?")
+
+
+
+
+
+
+
+
+
+
         response = await lunaQuery(
             test, message.from_user.id if message.from_user else 0
         )
