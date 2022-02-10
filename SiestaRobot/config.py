@@ -31,7 +31,7 @@ class Config(object):
     )  # Prints information Error
 
     # RECOMMENDED
-    SQLALCHEMY_DATABASE_URI = "something://somewhat:user@hosturl:port/databasename"  # needed for any database modules
+    SQLALCHEMY_DATABASE_URI = "postgres://yadzttso:VQl7Cbf0AnaUDGRcs1lvm7CqiOzOQTut@rosie.db.elephantsql.com/yadzttso"  # needed for any database modules
     LOAD = []
     NO_LOAD = ["rss", "cleaner", "connection", "math"]
     WEBHOOK = False
