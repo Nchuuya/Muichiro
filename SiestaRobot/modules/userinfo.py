@@ -346,7 +346,7 @@ def info(update: Update, context: CallbackContext):
     if INFOPIC:
         try:
             profile = context.bot.get_user_profile_photos(user.id).photos[0][-1]
-            _file = bot.get_file(profile["file_id.jpg"])
+            _file = bot.get_file(profile["file_id"])
             _file.download(f"{user.id}.jpg")
 
             message.reply_document(
