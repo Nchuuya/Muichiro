@@ -5,4 +5,4 @@ def helps(chat):
     return gs(chat, "musicplayer_help")
 
 
-__mod_name__ = "Musicplayer"
+__mod_name__ = "BOA_MUSIC"
