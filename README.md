@@ -19,7 +19,7 @@
 </p>
 
 <p align="center">
-  <img src="https://telegra.ph/file/de2cba2944d8cbe948d11.jpg">
+  <img src="https://c4.wallpaperflare.com/wallpaper/690/652/917/one-piece-boa-hancock-anime-girls-1125x938-anime-one-piece-hd-art-wallpaper-preview.jpg">
 </p>
 
 <h2 align="center">
