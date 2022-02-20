@@ -609,8 +609,8 @@ musicplayer_help: |
     ──「 Musicplayer 」──
 
     Help Music can access with different command and support dashboard help and setting.
-    ❂ /mhelp - for help music module
-    ❂ /msettings - for setting music module
+    ❂ /play - play songs in VC
+    ❂ /vplay- play vedio in VC 
 
     NOTE : DON'T SPAMMING AT REQUEST SONG OR VIDEO...
 notes_help: |
