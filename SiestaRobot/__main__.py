@@ -230,12 +230,8 @@ def start(update: Update, context: CallbackContext):
             text=gs(chat.id, "group_start_text").format(
                 escape_markdown(uptime),
                 ),
-            reply_markup=InlineKeyboardMarkup(
-                [
+            
 
-                        InlineKeyboardButton(text=gs(chat.id, "support_chat_link_button"), url="https://t.me/straydogs"),
-                ]
-                ),
             parse_mode=ParseMode.MARKDOWN
        )
 
