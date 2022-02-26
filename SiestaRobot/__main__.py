@@ -233,8 +233,7 @@ def start(update: Update, context: CallbackContext):
             reply_markup=InlineKeyboardMarkup(
                 [
 
-                        InlineKeyboardButton(text=gs(chat.id, "help_button"), url="https://t.me/BoaHancock_Robot"),
-
+                        InlineKeyboardButton(text=gs(chat.id, "support_chat_link_button"), url="https://t.me/straydogs"),
                 ]
                 ),
             parse_mode=ParseMode.MARKDOWN
