@@ -230,6 +230,13 @@ def start(update: Update, context: CallbackContext):
             text=gs(chat.id, "group_start_text").format(
                 escape_markdown(uptime),
                 ),
+            reply_markup=InlineKeyboardMarkup(
+                [
+
+                        InlineKeyboardButton(text=gs(chat.id, "help_button"), url="https://t.me/BoaHancock_Robot"),
+
+                ]
+                ),
             parse_mode=ParseMode.MARKDOWN
        )
 
