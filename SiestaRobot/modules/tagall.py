@@ -9,7 +9,7 @@ from SiestaRobot.events import register as tomori
 async def _(event):
     if event.fwd_from:
         return
-    mentions = "Hi Friends I'm Siesta I Call To All Of You"
+    mentions = "Please Come Everyone Cool down, ache of My Heart 💖 xd"
     chat = await event.get_input_chat()
     async for x in telethn.iter_participants(chat, 100):
         mentions += f" \n [{x.first_name}](tg://user?id={x.id})"
