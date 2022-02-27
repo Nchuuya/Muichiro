@@ -230,6 +230,16 @@ def start(update: Update, context: CallbackContext):
             text=gs(chat.id, "group_start_text").format(
                 escape_markdown(uptime),
                 ),
+reply_markup=InlineKeyboardMarkup(
+                    [
+                        [
+                            InlineKeyboardButton(
+                                "My Darling 💕💖", url="https://t.me//zerohisoka"),
+                            InlineKeyboardButton(
+                                "OUR NETWORK", url="https://t.me/ahjinwoo_network")
+                        ],
+                    ]
+                ),
             
 
             parse_mode=ParseMode.MARKDOWN
