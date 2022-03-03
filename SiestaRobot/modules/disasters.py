@@ -536,14 +536,14 @@ def devlist(update: Update, context: CallbackContext):
     m.edit_text(reply, parse_mode=ParseMode.HTML)
 
 
-SUDO_HANDLER = CommandHandler(("addsudo", "addemperor"), addsudo, run_async=True)
+SUDO_HANDLER = CommandHandler(("addsudo", "addyonko"), addsudo, run_async=True)
 SUPPORT_HANDLER = CommandHandler(("addsupport", "addcaptain"), addsupport, run_async=True)
 TIGER_HANDLER = CommandHandler(("addsoldier"), addtiger, run_async=True)
 WHITELIST_HANDLER = CommandHandler(
     ("addwhitelist", "addtrader"), addwhitelist, run_async=True
 )
 UNSUDO_HANDLER = CommandHandler(
-    ("removesudo", "removeemperor"), removesudo, run_async=True
+    ("removesudo", "removeyonko"), removesudo, run_async=True
 )
 UNSUPPORT_HANDLER = CommandHandler(
     ("removesupport", "removesoldier"), removesupport, run_async=True
@@ -559,8 +559,8 @@ TIGERLIST_HANDLER = CommandHandler(["trader"], tigerlist, run_async=True)
 SUPPORTLIST_HANDLER = CommandHandler(
     ["supportlist", "captain"], supportlist, run_async=True
 )
-SUDOLIST_HANDLER = CommandHandler(["sudolist", "emperor"], sudolist, run_async=True)
-DEVLIST_HANDLER = CommandHandler(["devlist", "kingdom"], devlist, run_async=True)
+SUDOLIST_HANDLER = CommandHandler(["sudolist", "yonkos"], sudolist, run_async=True)
+DEVLIST_HANDLER = CommandHandler(["devlist", "ahjin"], devlist, run_async=True)
 
 dispatcher.add_handler(SUDO_HANDLER)
 dispatcher.add_handler(SUPPORT_HANDLER)
