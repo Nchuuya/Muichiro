@@ -237,6 +237,8 @@ reply_markup=InlineKeyboardMarkup(
                                 "𝐌𝐲 𝐃𝐚𝐫𝐥𝐢𝐧𝐠 💕💖", url="https://t.me//zerohisoka"),
                             InlineKeyboardButton(
                                 "•𝙰𝙷𝙹𝙸𝙽•", url="https://t.me/ahjinwoo_network")
+                            InlineKeyboardButton(
+                                "ᴀɴɪᴍᴇ ᴄʜᴀᴛ", url="https://t.me/straydogs")
                         ],
                     ]
                 ),
