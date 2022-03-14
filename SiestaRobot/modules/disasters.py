@@ -553,7 +553,7 @@ UNWHITELIST_HANDLER = CommandHandler(
     ("removewhitelist", "removetrader"), removewhitelist, run_async=True
 )
 WHITELISTLIST_HANDLER = CommandHandler(
-    ["whitelistlist", "Bounty Hunter"], whitelistlist, run_async=True
+    ["whitelistlist", "Bountyhunter"], whitelistlist, run_async=True
 )
 TIGERLIST_HANDLER = CommandHandler(["trader"], tigerlist, run_async=True)
 SUPPORTLIST_HANDLER = CommandHandler(
