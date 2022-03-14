@@ -200,7 +200,7 @@ def new_member(update: Update, context: CallbackContext):  # sourcery no-metrics
             # Give the owner a special welcome
             if new_mem.id == OWNER_ID:
                 update.effective_message.reply_text(
-                    f"Welcome to {html.escape(chat.title)} my king.", reply_to_message_id=reply
+                    f"Welcome to {html.escape(chat.title)} my king.[💕](https://telegra.ph/file/e39fbb03d652e0e13ece2.jpg)", reply_to_message_id=reply
                 )
                 welcome_log = (
                     f"{html.escape(chat.title)}\n"
@@ -212,7 +212,7 @@ def new_member(update: Update, context: CallbackContext):  # sourcery no-metrics
             # Welcome Devs
             if new_mem.id in DEV_USERS:
                 update.effective_message.reply_text(
-                    "Whoa! The Prince just joined!",
+                    "Oh! Yonko Just Joined Be Prepared[❣️] (https://telegra.ph/file/ce583c6806373aeb8f2d0.jpg)",
                     reply_to_message_id=reply,
                 )
                 continue
@@ -220,7 +220,7 @@ def new_member(update: Update, context: CallbackContext):  # sourcery no-metrics
             # Welcome Sudos
             if new_mem.id in DRAGONS:
                 update.effective_message.reply_text(
-                    "Huh! Emperor just joined! Stay Alert!",
+                    "New World Pirates are here",
                     reply_to_message_id=reply,
                 )
                 continue
@@ -228,7 +228,7 @@ def new_member(update: Update, context: CallbackContext):  # sourcery no-metrics
             # Welcome Support
             if new_mem.id in DEMONS:
                 update.effective_message.reply_text(
-                    "Huh! Someone with Captain just joined!",
+                    "Mugiwara no Kaizoku Ara!",
                     reply_to_message_id=reply,
                 )
                 continue
@@ -236,7 +236,7 @@ def new_member(update: Update, context: CallbackContext):  # sourcery no-metrics
             # Welcome WOLVES
             if new_mem.id in WOLVES:
                 update.effective_message.reply_text(
-                    "Oof! A Soldier Users just joined!", reply_to_message_id=reply
+                    "Oof! A Bounty Hunter!", reply_to_message_id=reply
                 )
                 continue
                 
