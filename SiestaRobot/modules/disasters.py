@@ -543,7 +543,7 @@ WHITELIST_HANDLER = CommandHandler(
     ("addwhitelist", "addtrader"), addwhitelist, run_async=True
 )
 UNSUDO_HANDLER = CommandHandler(
-    ("removesudo", "removeyonko"), removesudo, run_async=True
+    ("removesudo", "removeneworld"), removesudo, run_async=True
 )
 UNSUPPORT_HANDLER = CommandHandler(
     ("removesupport", "removesoldier"), removesupport, run_async=True
@@ -553,14 +553,14 @@ UNWHITELIST_HANDLER = CommandHandler(
     ("removewhitelist", "removetrader"), removewhitelist, run_async=True
 )
 WHITELISTLIST_HANDLER = CommandHandler(
-    ["whitelistlist", "trader"], whitelistlist, run_async=True
+    ["whitelistlist", "Bounty Hunter"], whitelistlist, run_async=True
 )
 TIGERLIST_HANDLER = CommandHandler(["trader"], tigerlist, run_async=True)
 SUPPORTLIST_HANDLER = CommandHandler(
-    ["supportlist", "captain"], supportlist, run_async=True
+    ["supportlist", "Swordsman"], supportlist, run_async=True
 )
-SUDOLIST_HANDLER = CommandHandler(["sudolist", "yonkos"], sudolist, run_async=True)
-DEVLIST_HANDLER = CommandHandler(["devlist", "ahjin"], devlist, run_async=True)
+SUDOLIST_HANDLER = CommandHandler(["sudolist", "New World"], sudolist, run_async=True)
+DEVLIST_HANDLER = CommandHandler(["devlist", "Yonkos"], devlist, run_async=True)
 
 dispatcher.add_handler(SUDO_HANDLER)
 dispatcher.add_handler(SUPPORT_HANDLER)
