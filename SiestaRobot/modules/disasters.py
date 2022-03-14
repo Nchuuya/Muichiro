@@ -506,7 +506,7 @@ def sudolist(update: Update, context: CallbackContext):
         parse_mode=ParseMode.HTML,
     )
     true_sudo = list(set(DRAGONS) - set(DEV_USERS))
-    reply = "<b>Known the Emperor 🧞‍♀:</b>\n"
+    reply = "<b>Number of New World Kaizoku ❤️:</b>\n"
     for each_user in true_sudo:
         user_id = int(each_user)
         try:
@@ -525,7 +525,7 @@ def devlist(update: Update, context: CallbackContext):
         parse_mode=ParseMode.HTML,
     )
     true_dev = list(set(DEV_USERS) - {OWNER_ID})
-    reply = "<b>Member of family this Kingdom 🤴:</b>\n"
+    reply = "Number of Yonko 💜:</b>\n"
     for each_user in true_dev:
         user_id = int(each_user)
         try:
@@ -559,7 +559,7 @@ TIGERLIST_HANDLER = CommandHandler(["trader"], tigerlist, run_async=True)
 SUPPORTLIST_HANDLER = CommandHandler(
     ["supportlist", "Swordsman"], supportlist, run_async=True
 )
-SUDOLIST_HANDLER = CommandHandler(["sudolist", "New World"], sudolist, run_async=True)
+SUDOLIST_HANDLER = CommandHandler(["sudolist", "neworld"], sudolist, run_async=True)
 DEVLIST_HANDLER = CommandHandler(["devlist", "Yonkos"], devlist, run_async=True)
 
 dispatcher.add_handler(SUDO_HANDLER)
