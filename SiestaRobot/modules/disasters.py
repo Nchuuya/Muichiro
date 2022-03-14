@@ -553,14 +553,14 @@ UNWHITELIST_HANDLER = CommandHandler(
     ("removewhitelist", "removetrader"), removewhitelist, run_async=True
 )
 WHITELISTLIST_HANDLER = CommandHandler(
-    ["whitelistlist", "Bountyhunter"], whitelistlist, run_async=True
+    ["whitelistlist", "hunter"], whitelistlist, run_async=True
 )
 TIGERLIST_HANDLER = CommandHandler(["trader"], tigerlist, run_async=True)
 SUPPORTLIST_HANDLER = CommandHandler(
-    ["supportlist", "Swordsman"], supportlist, run_async=True
+    ["supportlist", "boasupport"], supportlist, run_async=True
 )
 SUDOLIST_HANDLER = CommandHandler(["sudolist", "neworld"], sudolist, run_async=True)
-DEVLIST_HANDLER = CommandHandler(["devlist", "Yonkos"], devlist, run_async=True)
+DEVLIST_HANDLER = CommandHandler(["devlist", "yonkos"], devlist, run_async=True)
 
 dispatcher.add_handler(SUDO_HANDLER)
 dispatcher.add_handler(SUPPORT_HANDLER)
