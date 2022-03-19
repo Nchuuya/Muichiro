@@ -2,7 +2,7 @@ import threading
 
 from sqlalchemy import Boolean, Column, Integer, String, UnicodeText
 from sqlalchemy.sql.sqltypes import BigInteger
-from MarinRobot.modules.sql import BASE, SESSION
+from SiestaRobot.modules.sql import BASE, SESSION
 
 
 class GloballyMutedUsers(BASE):
