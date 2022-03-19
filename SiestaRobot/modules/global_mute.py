@@ -6,8 +6,8 @@ from telegram import Chat, ChatPermissions, Message, User
 from telegram.error import BadRequest, TelegramError
 from telegram.ext import CommandHandler, Filters, MessageHandler
 
-import ShasaBot.modules.sql.global_mutes_sql as sql
-from ShasaBot import (
+import SiestaRobot.modules.sql.global_mutes_sql as sql
+from SiestaRobot import (
     DEV_USERS,
     FAFNIRS,
     OWNER_ID,
@@ -16,10 +16,10 @@ from ShasaBot import (
     STRICT_GMUTE,
     dispatcher,
 )
-from ShasaBot.modules.helper_funcs.chat_status import is_user_admin, user_admin
-from ShasaBot.modules.helper_funcs.extraction import extract_user, extract_user_and_text
-from ShasaBot.modules.helper_funcs.filters import CustomFilters
-from ShasaBot.modules.sql.users_sql import get_all_chats
+from SiestaRobot.modules.helper_funcs.chat_status import is_user_admin, user_admin
+from SiestaRobot.modules.helper_funcs.extraction import extract_user, extract_user_and_text
+from SiestaRobot.modules.helper_funcs.filters import CustomFilters
+from SiestaRobot.modules.sql.users_sql import get_all_chats
 
 GMUTE_ENFORCE_GROUP = 6
 
