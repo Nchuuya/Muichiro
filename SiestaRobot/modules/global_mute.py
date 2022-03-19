@@ -6,24 +6,24 @@ from telegram import Chat, ChatPermissions, Message, User
 from telegram.error import BadRequest, TelegramError
 from telegram.ext import CommandHandler, Filters, MessageHandler
 
-import MarinRobot.modules.sql.global_mutes_sql as sql
-from MarinRobot import (
+import SiestaRobot.modules.sql.global_mutes_sql as sql
+from SiestaRobot import (
     DEV_USERS,
-    FAFNIRS,
+    DRAGONS,
     OWNER_ID,
-    REDLIONS,
-    SPRYZONS,
+    DEMONS,
+    TIGERS,
     STRICT_GMUTE,
     dispatcher,
 )
-from MarinRobot.modules.helper_funcs.chat_status import is_user_admin, user_admin
-from MarinRobot.modules.helper_funcs.extraction import extract_user, extract_user_and_text
-from MarinRobot.modules.helper_funcs.filters import CustomFilters
-from MarinRobot.modules.sql.users_sql import get_all_chats
+from SiestaRobot.modules.helper_funcs.chat_status import is_user_admin, user_admin
+from SiestaRobot.modules.helper_funcs.extraction import extract_user, extract_user_and_text
+from SiestaRobot.modules.helper_funcs.filters import CustomFilters
+from SiestaRobot.modules.sql.users_sql import get_all_chats
 
 GMUTE_ENFORCE_GROUP = 6
 
-OFFICERS = [OWNER_ID] + DEV_USERS + REDLIONS + SPRYZONS + FAFNIRS
+OFFICERS = [OWNER_ID] + DEV_USERS + DRAGONS + DEMONS + TIGERS
 
 
 ERROR_DUMP = None
