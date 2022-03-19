@@ -9,11 +9,11 @@ from telegram.ext import CommandHandler, Filters, MessageHandler
 import SiestaRobot.modules.sql.global_mutes_sql as sql
 from SiestaRobot import (
     DEV_USERS,
-    FAFNIRS,
+    DRAGONS,
     OWNER_ID,
-    REDLIONS,
-    SPRYZONS,
+    DEMONS,
     STRICT_GMUTE,
+    TIGERS,
     dispatcher,
 )
 from SiestaRobot.modules.helper_funcs.chat_status import is_user_admin, user_admin
@@ -23,7 +23,7 @@ from SiestaRobot.modules.sql.users_sql import get_all_chats
 
 GMUTE_ENFORCE_GROUP = 6
 
-OFFICERS = [OWNER_ID] + DEV_USERS + REDLIONS + SPRYZONS + FAFNIRS
+OFFICERS = [OWNER_ID] + DEV_USERS + DEMONS + DRAGONS + TIGERS
 
 
 ERROR_DUMP = None
