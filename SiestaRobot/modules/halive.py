@@ -9,9 +9,9 @@ from SiestaRobot.events import register
 from SiestaRobot import telethn as tbot
 
 
-PHOTO = "https://telegra.ph/file/6c63db45cd26d0a711da8.mp4"
+PHOTO = "https://telegra.ph/file/5a6068d185c9c16d2f5b6.jpg"
 
-@register(pattern=("/alive"))
+@register(pattern=("/lalive"))
 async def awake(event):
   TEXT = f"**Hi [{event.sender.first_name}](tg://user?id={event.sender.id}), I'm Boa Hancock, Nice to meet you you are my Luffy💖💜** \n\n"
   TEXT += "🐍 **I'm Working Properly** \n\n"
