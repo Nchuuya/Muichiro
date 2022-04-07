@@ -506,7 +506,7 @@ def sudolist(update: Update, context: CallbackContext):
         parse_mode=ParseMode.HTML,
     )
     true_sudo = list(set(DRAGONS) - set(DEV_USERS))
-    reply = "<b>Number of New World Kaizoku ❤️:</b>\n"
+    reply = "<b>Known the yonkos 🧞‍♀:</b>\n"
     for each_user in true_sudo:
         user_id = int(each_user)
         try:
@@ -525,7 +525,7 @@ def devlist(update: Update, context: CallbackContext):
         parse_mode=ParseMode.HTML,
     )
     true_dev = list(set(DEV_USERS) - {OWNER_ID})
-    reply = "Yonkos 💜:</b>\n"
+    reply = "<b>Yonkos 💜:</b>\n"
     for each_user in true_dev:
         user_id = int(each_user)
         try:
@@ -536,14 +536,14 @@ def devlist(update: Update, context: CallbackContext):
     m.edit_text(reply, parse_mode=ParseMode.HTML)
 
 
-SUDO_HANDLER = CommandHandler(("addsudo", "addyonko"), addsudo, run_async=True)
+SUDO_HANDLER = CommandHandler(("addsudo", "addemperor"), addsudo, run_async=True)
 SUPPORT_HANDLER = CommandHandler(("addsupport", "addcaptain"), addsupport, run_async=True)
 TIGER_HANDLER = CommandHandler(("addsoldier"), addtiger, run_async=True)
 WHITELIST_HANDLER = CommandHandler(
     ("addwhitelist", "addtrader"), addwhitelist, run_async=True
 )
 UNSUDO_HANDLER = CommandHandler(
-    ("removesudo", "removeneworld"), removesudo, run_async=True
+    ("removesudo", "removeemperor"), removesudo, run_async=True
 )
 UNSUPPORT_HANDLER = CommandHandler(
     ("removesupport", "removesoldier"), removesupport, run_async=True
@@ -553,13 +553,13 @@ UNWHITELIST_HANDLER = CommandHandler(
     ("removewhitelist", "removetrader"), removewhitelist, run_async=True
 )
 WHITELISTLIST_HANDLER = CommandHandler(
-    ["whitelistlist", "hunter"], whitelistlist, run_async=True
+    ["whitelistlist", "trader"], whitelistlist, run_async=True
 )
 TIGERLIST_HANDLER = CommandHandler(["trader"], tigerlist, run_async=True)
 SUPPORTLIST_HANDLER = CommandHandler(
-    ["supportlist", "boasupport"], supportlist, run_async=True
+    ["supportlist", "captain"], supportlist, run_async=True
 )
-SUDOLIST_HANDLER = CommandHandler(["sudolist", "neworld"], sudolist, run_async=True)
+SUDOLIST_HANDLER = CommandHandler(["sudolist", "emperor"], sudolist, run_async=True)
 DEVLIST_HANDLER = CommandHandler(["devlist", "yonkos"], devlist, run_async=True)
 
 dispatcher.add_handler(SUDO_HANDLER)
