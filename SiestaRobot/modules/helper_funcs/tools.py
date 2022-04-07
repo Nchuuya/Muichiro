@@ -3,22 +3,22 @@ from html_telegraph_poster import TelegraphPoster
 
 def media_type(message):
  if message and message.photo:
- return "Photo"
+return "Photo"
  if message and message.audio:
- return "Audio"
+return "Audio"
  if message and message.voice:
- return "Voice"
+return "Voice"
  if message and message.video_note:
- return "Round Video"
+return "Round Video"
  if message and message.gif:
- return "Gif"
+return "Gif"
  if message and message.sticker:
- return "Sticker"
+return "Sticker"
  if message and message.video:
- return "Video"
+return "Video"
  if message and message.document:
- return "Document"
- return None
+return "Document"
+return None
 
 async def post_to_telegraph(page_title, html_format_content):
  post_client = TelegraphPoster(use_api=True)
