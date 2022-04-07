@@ -10,7 +10,6 @@ from datetime import datetime
 import random
 from telethon import events, Button, custom, version
 from SiestaRobot.events import register
-from SiestaRobot import telethn as borg, OWNER_ID, OWNER_NAME
 from SiestaRobot import StartTime, dispatcher
 from telethon.tl.types import ChannelParticipantsAdmins
 from pyrogram import __version__ as pyro
