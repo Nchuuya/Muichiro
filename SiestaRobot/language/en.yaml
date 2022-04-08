@@ -10,7 +10,7 @@ set_chat_lang: "Great, using {} Language it is from now on!"
 # PM Text
 pm_start_text: |
   *Hey Darling, {} ❤️*
-  ✪ I'm an anime-theme management robot [✨](https://telegra.ph/file/6c63db45cd26d0a711da8.mp4)
+  ✪ I'm ʙᴏᴀ ʜᴀɴᴄᴏᴄᴋ ♡ here to manage your groups thanks to Using me !🌟 [✨](https://telegra.ph/file/6c63db45cd26d0a711da8.mp4)
 
   ┏━━━━━━━━•❃°•°❀°•°❃•━━━━━━━━┓
   × *Server Uptime :* `{}`
@@ -91,12 +91,11 @@ notes_button: "𝐍𝐨𝐭𝐞𝐬"
 source_button: "𝐒𝐨𝐮𝐫𝐜𝐞 𝐂𝐨𝐝𝐞"
 
 
-help_button: "𝐇𝐞𝐥𝐩"
-back_button: "𝐁𝐚𝐜𝐤"
-about_button: "𝐀𝐛𝐨𝐮𝐭 𝐁𝐨𝐚 𝐇𝐚𝐧𝐜𝐨𝐜𝐤
-
-"
-inline_button: "𝐈𝐧𝐥𝐢𝐧𝐞"
+help_button: "ʜᴇʟᴘ 🌟"
+updates_button: "ʙᴏᴀ ʜᴀɴᴄᴏᴄᴋ ᴜᴘᴅᴀᴛᴇꜱ ✨"
+animechat_button: "ᴀɴɪᴍᴇ ᴄʜᴀᴛ 💠"
+support_button: "ꜱᴜᴘᴘᴏʀᴛ🚨"
+owner_button: "ᴋᴀᴢᴜᴛᴏʀᴀ ʜᴀɴᴇᴍɪʏᴀ 🛐"
 
 # MODULES
 admin_help: |
