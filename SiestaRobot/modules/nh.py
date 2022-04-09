@@ -33,7 +33,7 @@ from telegram.utils.helpers import mention_html, mention_markdown, escape_markdo
 
 @register(pattern=r"^/boanh ?(.*)")
 @register(pattern=r"^/nh ?(.*)")
-async def nhentai(event):
+async def nhe(event):
     message_id = event.message.id
     chat_id = event.chat_id
     input_str = event.pattern_match.group(1)
