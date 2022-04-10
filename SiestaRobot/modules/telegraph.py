@@ -1,119 +1,90 @@
+"""
+Telegraph module to upload text and image/video to telegra.ph via zerotwobot
+Author/Written - @kishoreee
+Copy with credits else face legal problems.
+"""
+
 import os
-
-from SiestaRobot.events import register
-from SiestaRobot import telethn as Client
-from telethon import events, Button, types
-
-TMP_DOWNLOAD_DIRECTORY = "./"
+from datetime import datetime
 
 from PIL import Image
-from datetime import datetime
-from telegraph import Telegraph, upload_file, exceptions
+from telegraph import Telegraph, exceptions, upload
+
+from SiestaRobot import TEMP_DOWNLOAD_LOC, dispatcher
+from telegram import Update
+from telegram.ext import CallbackContext, CommandHandler
+
+telegrph = Telegraph()
+
+r = telegrph.create_account(short_name="telegraph")
+auth_url = r["auth_url"]
+
+def telegraph(update: Update, context: CallbackContext):
+    message = update.effective_message
+    chat = update.effective_chat
+    user = update.effective_user
+    args = context.args
+    bot = context.bot
 
 
-wibu = "SiestaRobot"
-telegraph = Telegraph()
-data = telegraph.create_account(short_name=wibu)
-auth_url = data["auth_url"]
+    if not args:
+        message.reply_text("Sorry invalid option \n Ex: /telegraph m - for media \n /telegraph t - for text")
+        return 
+
+    msg = message.reply_text("<code>Started telegraph module...</code>", parse_mode="html")        
+
+    if not os.path.isdir(TEMP_DOWNLOAD_LOC):
+        os.mkdir(TEMP_DOWNLOAD_LOC)
 
 
-@register(pattern="^/t(gm|gt) ?(.*)")
-async def telegrap(event):
-    optional_title = event.pattern_match.group(2)
-    if event.reply_to_msg_id:
-        start = datetime.now()
-        reply_msg = await event.get_reply_message()
-        input_str = event.pattern_match.group(1)
-        if input_str == "gm":
-            downloaded_file_name = await Client.download_media(
-                reply_msg,
-                TMP_DOWNLOAD_DIRECTORY
-            )
-            end = datetime.now()
-            ms = (end - start).seconds
-            if not downloaded_file_name:
-                await Client.send_message(
-                    event.chat_id,
-                    "Not Supported Format Media!"
-                )
-                return
-            else:
-                if downloaded_file_name.endswith((".webp")):
-                    resize_image(downloaded_file_name)
+    if len(args) >= 1:
+        if message.reply_to_message:
+            start = datetime.now()
+            reply_msg = message.reply_to_message
+
+            if args[0] == "m":
+                if reply_msg.photo:
+                    file = reply_msg.photo[-1].get_file()
+                    file_name = "image"
+                elif reply_msg.video:
+                    file = reply_msg.video.get_file()
+                    file_name = reply_msg.video.file_name
+
+                downloaded_file = file.download(TEMP_DOWNLOAD_LOC + "/" + file_name)
+                msg.edit_text("<code>Downloaded image/video</code>", parse_mode="html")
+
                 try:
-                    start = datetime.now()
-                    media_urls = upload_file(downloaded_file_name)
+                    media_url = upload.upload_file(downloaded_file)
                 except exceptions.TelegraphException as exc:
-                    await event.reply("ERROR: " + str(exc))
-                    os.remove(downloaded_file_name)
+                    msg.edit_text(f"ERROR: {exc}")
                 else:
-                    end = datetime.now()
-                    ms_two = (end - start).seconds
-                    os.remove(downloaded_file_name)
-                    await Client.send_message(
-                        event.chat_id,
-                        "Your telegraph is complete uploaded!",
-                        buttons=[
-                            [
-                                types.KeyboardButtonUrl(
-                                    "➡ View Telegraph", "https://telegra.ph{}".format(media_urls[0], (ms + ms_two))
-                                )
-                            ]
-                        ]
+                    msg.edit_text(
+                        f"Succesfully uploaded to [telegra.ph](https://telegra.ph{media_url[0]})",
+                        parse_mode="markdown",
                     )
-        elif input_str == "gt":
-            user_object = await Client.get_entity(reply_msg.sender_id)
-            title_of_page = user_object.first_name # + " " + user_object.last_name
-            # apparently, all Users do not have last_name field
-            if optional_title:
-                title_of_page = optional_title
-            page_content = reply_msg.message
-            if reply_msg.media:
-                if page_content != "":
-                    title_of_page = page_content
+            elif args[0] == "t":
+                if user.last_name:
+                    page_title = user.first_name + " " + user.last_name
                 else:
-                    await Client.send_message(
-                        event.chat_id,
-                        "Not Supported Format Text!"
-                    )
-                downloaded_file_name = await Client.download_media(
-                    reply_msg,
-                    TMP_DOWNLOAD_DIRECTORY
+                    page_title = user.first_name
+
+                text = reply_msg.text
+                text = text.replace("\n", "<br>")
+
+                response = telegrph.create_page(
+                    page_title, html_content=text
                 )
-                m_list = None
-                with open(downloaded_file_name, "rb") as fd:
-                    m_list = fd.readlines()
-                for m in m_list:
-                    page_content += m.decode("UTF-8") + "\n"
-                os.remove(downloaded_file_name)
-            page_content = page_content.replace("\n", "<br>")
-            response = telegraph.create_page(
-                title_of_page,
-                html_content=page_content
-            )
-            end = datetime.now()
-            ms = (end - start).seconds
-            await Client.send_message(
-                    event.chat_id,
-                    "Your telegraph is complete uploaded!",
-                    buttons=[
-                        [
-                            types.KeyboardButtonUrl(
-                                "➡ View Telegraph", "https://telegra.ph/{}".format(response["path"], ms)
-                            )
-                        ]
-                    ]
+
+                msg.edit_text(
+                    f"Successfully uploaded the Text to [telegra.ph](https://telegra.ph/{response['path']})",
+                    parse_mode="markdown"
                 )
-    else:
-        await event.reply("Reply to a message to get a permanent telegra.ph link.")
+                
+
+        elif not message.reply_to_message:
+            msg.edit_text("Haha! I know this trick so tag any image/video/text")
 
 
-def resize_image(image):
-    im = Image.open(image)
-    im.save(image, "PNG")
+TELEGRAPH_HANDLER = CommandHandler("telegraph", telegraph, run_async=True)
 
-file_help = os.path.basename(__file__)
-file_help = file_help.replace(".py", "")
-file_helpo = file_help.replace("_", " ")
-
-__mod_name__ = "Telegraph"
+dispatcher.add_handler(TELEGRAPH_HANDLER)
