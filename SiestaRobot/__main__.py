@@ -202,8 +202,8 @@ def start(update: Update, context: CallbackContext):
         else:
             first_name = update.effective_user.first_name
             update.effective_message.reply_photo(
-                caption=gs(chat.id, "pm_start_text").format(
-                    MIKU_IMG,
+                MIKU_IMG,
+                caption=gs(chat.id, "pm_start_text").format(                    
                     escape_markdown(first_name),
                     escape_markdown(uptime),
                     sql.num_users(),
@@ -219,7 +219,7 @@ def start(update: Update, context: CallbackContext):
                         ],
                         [
                             InlineKeyboardButton(text=gs(chat.id, "support_button"), url="https://t.me/BoaHancock_Support"),
-                            InlineKeyboardButton(text=gs(chat.id, "owner_button"), url="https://t.me/zero-hisoka"),
+                            InlineKeyboardButton(text=gs(chat.id, "owner_button"), url="https://t.me/zero_hisoka"),
                         ],
                         [
                             InlineKeyboardButton(
