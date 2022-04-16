@@ -37,6 +37,7 @@ from SiestaRobot import (
 from SiestaRobot.modules import ALL_MODULES
 from SiestaRobot.modules.helper_funcs.chat_status import is_user_admin
 from SiestaRobot.modules.helper_funcs.misc import paginate_modules
+from SiestaRobot.script import MIKU_IMG
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import (
     BadRequest,
@@ -200,8 +201,9 @@ def start(update: Update, context: CallbackContext):
 
         else:
             first_name = update.effective_user.first_name
-            update.effective_message.reply_text(
-                text=gs(chat.id, "pm_start_text").format(
+            update.effective_message.reply_photo(
+                caption=gs(chat.id, "pm_start_text").format(
+                    MIKU_IMG,
                     escape_markdown(first_name),
                     escape_markdown(uptime),
                     sql.num_users(),
