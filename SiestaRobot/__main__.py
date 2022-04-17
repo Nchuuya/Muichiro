@@ -210,22 +210,13 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton(text=gs(chat.id, "animechat_button"), callback_data="siesta_"),
-                        ],
-                        [
                             InlineKeyboardButton(text=gs(chat.id, "help_button"), callback_data="help_back"),
-                            InlineKeyboardButton(text=gs(chat.id, "updates_button"), url="https://t.me/boa_updates"),
                         ],
                         [
                             InlineKeyboardButton(text=gs(chat.id, "support_button"), url="https://t.me/BoaHancock_Support"),
-                            InlineKeyboardButton(text=gs(chat.id, "owner_button"), url="https://t.me/zero_hisoka"),
-                        ],
-                        [
-                            InlineKeyboardButton(
-                                text=gs(chat.id, "xd_button"), url="t.me/BoaHancock_Robot?startgroup=new"),
-                        ]
-
                         
+                        ],
+   
                     ]
                 ),
                 parse_mode=ParseMode.MARKDOWN,
