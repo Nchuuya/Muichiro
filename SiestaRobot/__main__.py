@@ -203,7 +203,7 @@ def start(update: Update, context: CallbackContext):
             first_name = update.effective_user.first_name
             update.effective_message.reply_photo(
                 MIKU_IMG,
-                caption=gs(chat.id, "*Hey Darling, {} ❤️*\n✪ I'm ʙᴏᴀ ʜᴀɴᴄᴏᴄᴋ ♡ here to manage your groups thanks to Using me !🌟\n┏━━━━━━━━•❃°•°❀°•°❃•━━━━━━━━┓\n× *Server Uptime :* `{}`\n× `{}` *users, across* `{}` *chats.*\n┗━━━━━━━━•❃°•°❀°•°❃•━━━━━━━━┛\n✪ Hit /help to see my available commands.").format(                    
+                caption=gs(chat.id, "pm_start_text").format(                    
                     escape_markdown(first_name),
                     escape_markdown(uptime),
                     sql.num_users(),
