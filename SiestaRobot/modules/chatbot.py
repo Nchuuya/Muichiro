@@ -66,7 +66,7 @@ def kukiadd(update: Update, context: CallbackContext) -> str:
             )
         else:
             update.effective_message.edit_text(
-                "Boa Hancock Chatbot enable by {}.".format(mention_html(user.id, user.first_name)),
+                "Akira Todo Chatbot enable by {}.".format(mention_html(user.id, user.first_name)),
                 parse_mode=ParseMode.HTML,
             )
 
@@ -116,8 +116,8 @@ def chatbot(update: Update, context: CallbackContext):
         if not kuki_message(context, message):
             return
         Message = message.text
-        bot.send_chat_action(chat_id, action="typing")
-        kukiurl = requests.get('https://kukiapi.xyz/api/apikey=KUKItg111XlOZ/yuzuki/moezill/message='+Message)
+        bot.send_chat_action(chat_id, action="typing")      #KUKItg111XlOZ
+        kukiurl = requests.get('https://kukiapi.xyz/api/apikey=5394010695-KUKIZx1ofj0Io3/yuzuki/moezill/message='+Message)
         Kuki = json.loads(kukiurl.text)
         kuki = Kuki['reply']
         sleep(0.3)
