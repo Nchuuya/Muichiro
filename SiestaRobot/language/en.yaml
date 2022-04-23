@@ -10,17 +10,17 @@ set_chat_lang: "Great, using {} Language it is from now on!"
 # PM Text
 pm_start_text: |
   *Hey Darling, {} ♡*
-  ✪ I'm ʙᴏᴀ ʜᴀɴᴄᴏᴄᴋ ♡ here to manage your groups thanks to Using me ![🌟](https://telegra.ph/file/81fcd6895c2d27fc939b4.mp4)
+  ✪ I'm ʙᴏᴀ ʜᴀɴᴄᴏᴄᴋ ♡ here to manage your groups thanks to Using me !
 
-  ┏━━━━━━━━♡♡♡♡♡♡♡♡♡♡━━━━━━━━┓
-  × *Server Uptime :* `{}`
+  ━━━━━━━━♡♡♡♡♡♡♡♡♡♡━━━━━━━━
+  × Made by @zer0hisoka
   × Yuuki Music 3.0
-  ┗━━━━━━━━♡♡♡♡♡♡♡♡♡♡━━━━━━━━┛
+  ━━━━━━━━♡♡♡♡♡♡♡♡♡♡━━━━━━━━
 
   ✪ Hit /help to see my available commands.
    
 group_start_text: |
-  *💖 Hi Darling, I'm Boa Hancock! Everyone Here i Love You all just make sure i am admin for Voice Chat*[💕](https://telegra.ph/file/5c0338d6c76ed65100183.mp4)
+  *💖 Hi Darling, I'm Boa Hancock! Everyone Here i Love You all just make sure i am admin for Voice Chat*[💕](https://telegra.ph/file/81fcd6895c2d27fc939b4.mp4)
   
   *Started active since :* `{}`
 
