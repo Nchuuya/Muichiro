@@ -60,3 +60,5 @@ This Bot is Created by Nchuuya and Jinwoo Team, If your kanging this without for
 - DaisyX 
 - WilliamButcherBot
 ```
+
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/Eb5nwe)
