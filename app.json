@@ -31,37 +31,37 @@
       "TOKEN": {
          "description": "Your bot token. Get one from @BotFather duh",
          "required": true,
-         "value": ""
+         "value": "5191978202:AAG9XO83aYutZp4tHqIy6clVsTBkLFJdLR4"
       },
       "API_ID": {
          "description": "Get API_ID from my.telegram.org, used for telethon based modules.",
          "required": true,
-         "value": ""
+         "value": "8276637"
       },
       "API_HASH": {
          "description": "Get API_HASH from my.telegram.org, used for telethon based modules.",
          "required": true,
-         "value": ""
+         "value": "c412d38a4ebcc2b32621a5c2be276d13"
       },    
       "SQLALCHEMY_DATABASE_URI": {
          "description": "Your postgres sql db, empty this field if you dont have one.",
          "required": false,
-         "value": "sqldbtype://username:pw@hostname:port/db_name"
+         "value": ""
       },      
       "OWNER_ID": {
          "description": "Your user ID as an integer.",
          "required": true,
-         "value": "945137470"
+         "value": "5293428505"
      },
 
       "STRING_SESSION": {
          "description": "Fill with telethon string session.",
          "required": true,
-         "value": "" 
+         "value": "1BVtsOGgBuz7jlI1CG5dTIPD-b5cAjXLkL4iOxID4AL6ZtejBd3AoxWfed13D_SAM8KGy2_KrAFK3GQwTuGGPn9hAwRzvqkWmQW9zpJmJYK4BSA7yq0o_LcPc88nwVsQcaxEfF1qRa2db9aRGNTwVDL1D1fcmfirt5LbofgjNMcCmRKuseUXIqgKWCufQ9jhsyQ2YbbbnpZqmF_cIThbBSTnmN15F_Ok6HbLx8JA94JMiXKTpYuzZ5zfKvLWl7MeEkoHbdq9lpOjfGZLXNYT-OtA_lfDxmfG9kswmca5Krx2uJXAe6xeN_xdvFPOKBWCcORXtStEyQbUsx-gorIgw1kjQDAXWlkY=" 
       },
       "HEROKU_API_KEY": {
         "description": "Your Heroku API key, get it from 'https://dashboard.heroku.com/account'",
-        "value": ""
+        "value": "-xyz"
       },
       "HEROKU_APP_NAME": {
         "description": "Enter the Heroku app name here (Must an exact same name with your input above).",
@@ -69,27 +69,27 @@
       },
       "BOT_USERNAME": {
          "description": "username of your bot without the @",
-         "value": "siestaxbot"
+         "value": "akiratodobot"
       },
 
       "BOT_ID": {
          "description": "to get your bot_id using other bot or userbot",
-         "value": ""
+         "value": "5191978202"
       },
 
       "OWNER_USERNAME": {
          "description": "Your username without the @",
-         "value": "saint_foire"
+         "value": "zero_hisoka"
       },
       "SUPPORT_CHAT": {
          "description": "Your Telegram support group chat username where your users will go and bother you with shit But be like: MyGroupChatUsernameBlah. If this ever points to masha support than consider you made an enemy.",
          "required": true,
-         "value": "machinaxsupport"
+         "value": "akiratodosupport"
       },
       "MONGO_DB_URI": {
          "description": "Required for database connections.",
          "required": true,
-         "value": ""
+         "value": "mongodb+srv://zerohisoka:kumar123@cluster0.8sg2a.mongodb.net/Cluster0?retryWrites=true&w=majority"
       },
       "IBM_WATSON_CRED_URL": {
          "description": "This is required for the speech to text module. Get your USERNAME from https://console.bluemix.net/docs/services/speech-to-text/getting-started.html",
@@ -102,12 +102,12 @@
      "EVENT_LOGS": {
          "description": "Event logs channel to note down important bot level events, recommend to make this public. ex: '-123456'",
          "required": true,
-         "value": "-1001237968047"
+         "value": "-1001661950688"
       },
       "JOIN_LOGGER": {
          "description": "A channel where bot will print who added it to what group, useful during debugging or spam handling.",
          "required": true,
-         "value": "-1001180007354"
+         "value": "-1001661950688"
       },      
       "CASH_API_KEY": {
          "description": "Required for currency converter. Get yours from https://www.alphavantage.co/support/#api-key",
@@ -129,7 +129,7 @@
       "DEV_USERS": {
          "description": "ID of users who are Devs of your bot (can use /py etc.). If you are a noob and would come and bother Masha support then keep the current ID's here at they are and add yours.",
          "required": false,
-         "value": ""
+         "value": "5394010695 5148631955 5083917315 1297082217 5191978202"
      },
         "ARQ_API": {
             "description": "Get this from @ARQRobot.",
