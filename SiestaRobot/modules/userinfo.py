@@ -48,7 +48,7 @@ from SiestaRobot.modules.helper_funcs.chat_status import sudo_plus
 from SiestaRobot.modules.helper_funcs.extraction import extract_user
 from SiestaRobot import telethn
 
-MIKU_IMG = "https://telegra.ph/file/d9986b3e88fdadc021279.jpg"
+MIKU_IMG = "https://telegra.ph/file/de2cba2944d8cbe948d11.jpg"
 
 def no_by_per(totalhp, percentage):
     """
