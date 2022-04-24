@@ -240,10 +240,10 @@ def info(update: Update, context: CallbackContext):
     [
                         InlineKeyboardButton(
                              text="Health",
-                             url="https://t.me/akira_updates"),
+                             url="https://t.me/boa_updates/99"),
                        InlineKeyboardButton(
                              text="Disasters",
-                             url="https://t.me/akira_updates"),
+                             url="https://t.me/boa_updates/98"),
                     ],
     ]
     user_id = extract_user(update.effective_message, args)
@@ -269,10 +269,10 @@ def info(update: Update, context: CallbackContext):
     else:
         return
 
-    rep = message.reply_text("<code>Appraising...</code>", parse_mode=ParseMode.HTML)
+    rep = message.reply_text("<code>wait why so horny...</code>", parse_mode=ParseMode.HTML)
 
     text = (
-        f"╒═══「<b>• Appraisal results •</b> 」\n"
+        f"╒═══「<b>• Results•</b> 」\n"
         f"• ID: <code>{user.id}</code>\n"
         f"• First Name: {html.escape(user.first_name)}"
     )
@@ -468,15 +468,15 @@ def stats(update, context):
             status
             + "\n*Bot statistics*:\n"
             + "\n".join([mod.__stats__() for mod in STATS])
-            + f"\n\n[✦ Support](https://t.me/{SUPPORT_CHAT}) | [✦ Updates](https://t.me/akira_updates)\n\n"
-            + "\n╘══「 by [S L A D E ♡](https://t.me/simp_ly_naveen) 」\n",
+            + f"\n\n[✦ Support](https://t.me/{SUPPORT_CHAT}) | [✦ Updates](https://t.me/boa_updates)\n\n"
+            + "\n╘══「 by [Kazutora ♡](https://t.me/zer0hisoka) 」\n",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                   [                  
                        InlineKeyboardButton(
-                             text="My Badass Owner",
-                             url="https://t.me/simp_ly_naveen")
+                             text="Kazu~Kun",
+                             url="https://t.me/zer0hisoka")
                      ] 
                 ]
             ),
@@ -489,9 +489,9 @@ def stats(update, context):
                         "\n*Bot statistics*:\n"
                         + "\n".join(mod.__stats__() for mod in STATS)
                     )
-                    + f"\n\n✦ [Support](https://t.me/{SUPPORT_CHAT}) | ✦ [Updates](https://t.me/akira_updates)\n\n"
+                    + f"\n\n✦ [Support](https://t.me/{SUPPORT_CHAT}) | ✦ [Updates](https://t.me/boa_updates/99)\n\n"
                 )
-                + "╘══「 by [S L A D E ♡](https://t.me/simp_ly_naveen) 」\n"
+                + "╘══「 by [Kazutora ♡](https://t.me/zer0hisoka) 」\n"
             ),
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
