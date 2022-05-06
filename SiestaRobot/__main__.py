@@ -2,6 +2,7 @@ import html
 import os
 import json
 import importlib
+import random
 import time
 import re
 import sys
@@ -201,8 +202,8 @@ def start(update: Update, context: CallbackContext):
 
         else:
             first_name = update.effective_user.first_name
-            update.effective_message.reply_video(
-                MIKU_IMG, 
+            update.effective_message.reply_photo(
+                random.choice(MIKU_IMG), 
                 caption=gs(chat.id, "pm_start_text").format(                    
                     escape_markdown(first_name),
                     escape_markdown(uptime),
@@ -215,6 +216,7 @@ def start(update: Update, context: CallbackContext):
                         ],
                         [
                             InlineKeyboardButton(text=gs(chat.id, "support_button"), url="https://t.me/BoaHancock_Support"),
+                            
                         
                         ],
    
