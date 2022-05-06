@@ -31,7 +31,7 @@
       "TOKEN": {
          "description": "Your bot token. Get one from @BotFather duh",
          "required": true,
-         "value": "5191978202:AAG9XO83aYutZp4tHqIy6clVsTBkLFJdLR4"
+         "value": "5276474965:AAFav-EqWxsQ0XhUI7YcPfHXb1yg-ij4y_A"
       },
       "API_ID": {
          "description": "Get API_ID from my.telegram.org, used for telethon based modules.",
@@ -57,7 +57,7 @@
       "STRING_SESSION": {
          "description": "Fill with telethon string session.",
          "required": true,
-         "value": "1BVtsOGgBuz7jlI1CG5dTIPD-b5cAjXLkL4iOxID4AL6ZtejBd3AoxWfed13D_SAM8KGy2_KrAFK3GQwTuGGPn9hAwRzvqkWmQW9zpJmJYK4BSA7yq0o_LcPc88nwVsQcaxEfF1qRa2db9aRGNTwVDL1D1fcmfirt5LbofgjNMcCmRKuseUXIqgKWCufQ9jhsyQ2YbbbnpZqmF_cIThbBSTnmN15F_Ok6HbLx8JA94JMiXKTpYuzZ5zfKvLWl7MeEkoHbdq9lpOjfGZLXNYT-OtA_lfDxmfG9kswmca5Krx2uJXAe6xeN_xdvFPOKBWCcORXtStEyQbUsx-gorIgw1kjQDAXWlkY=" 
+         "value": "1BVtsOIkBu4fDuoI5V-RIHvUSeVgJuviiuRayXzVbexpOyKBJo9Lmh0CTxaHM0qUZT5t75gS7AqMUW6s6zjUd6nw6QvXk-ZyjT28j4OCvVTCUkHQTfFpkyCjw7zhKOVuQ9QAGQspTCLn8IpmIJAT121ffMW88_Pxr0mxnRyo-l6qYYKOeaqx_c0XGOEGfQplSFMurP9wtcCB_j19qRBU2W66ACYpj9g6BK9Ue1mQp70UJPMlX0jlI6UgYGwQPbv9rV0eCiE8qdPIqUglCrO-fDZ39QGYukQ5Vh1RDJ7S-p7j9PayPSqnMYecockG6Zzc_cTwhWoMsekzZRchwpwSJAJo5_NeRdcc=" 
       },
       "HEROKU_API_KEY": {
         "description": "Your Heroku API key, get it from 'https://dashboard.heroku.com/account'",
@@ -69,17 +69,17 @@
       },
       "BOT_USERNAME": {
          "description": "username of your bot without the @",
-         "value": "akiratodobot"
+         "value": "boahancock_robot"
       },
 
       "BOT_ID": {
          "description": "to get your bot_id using other bot or userbot",
-         "value": "5191978202"
+         "value": "5276474965"
       },
 
       "OWNER_USERNAME": {
          "description": "Your username without the @",
-         "value": "zero_hisoka"
+         "value": "zer0hisoka"
       },
       "SUPPORT_CHAT": {
          "description": "Your Telegram support group chat username where your users will go and bother you with shit But be like: MyGroupChatUsernameBlah. If this ever points to masha support than consider you made an enemy.",
@@ -102,12 +102,12 @@
      "EVENT_LOGS": {
          "description": "Event logs channel to note down important bot level events, recommend to make this public. ex: '-123456'",
          "required": true,
-         "value": "-1001661950688"
+         "value": "-1001792336449"
       },
       "JOIN_LOGGER": {
          "description": "A channel where bot will print who added it to what group, useful during debugging or spam handling.",
          "required": true,
-         "value": "-1001661950688"
+         "value": "-1001792336449"
       },      
       "CASH_API_KEY": {
          "description": "Required for currency converter. Get yours from https://www.alphavantage.co/support/#api-key",
