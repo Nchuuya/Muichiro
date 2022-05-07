@@ -36,12 +36,12 @@
       "API_ID": {
          "description": "Get API_ID from my.telegram.org, used for telethon based modules.",
          "required": true,
-         "value": "8276637"
+         "value": "8714251"
       },
       "API_HASH": {
          "description": "Get API_HASH from my.telegram.org, used for telethon based modules.",
          "required": true,
-         "value": "c412d38a4ebcc2b32621a5c2be276d13"
+         "value": "50c97a11b622575c5b9441b1062f601a"
       },    
       "SQLALCHEMY_DATABASE_URI": {
          "description": "Your postgres sql db, empty this field if you dont have one.",
@@ -57,7 +57,7 @@
       "STRING_SESSION": {
          "description": "Fill with telethon string session.",
          "required": true,
-         "value": "1BVtsOIkBu4fDuoI5V-RIHvUSeVgJuviiuRayXzVbexpOyKBJo9Lmh0CTxaHM0qUZT5t75gS7AqMUW6s6zjUd6nw6QvXk-ZyjT28j4OCvVTCUkHQTfFpkyCjw7zhKOVuQ9QAGQspTCLn8IpmIJAT121ffMW88_Pxr0mxnRyo-l6qYYKOeaqx_c0XGOEGfQplSFMurP9wtcCB_j19qRBU2W66ACYpj9g6BK9Ue1mQp70UJPMlX0jlI6UgYGwQPbv9rV0eCiE8qdPIqUglCrO-fDZ39QGYukQ5Vh1RDJ7S-p7j9PayPSqnMYecockG6Zzc_cTwhWoMsekzZRchwpwSJAJo5_NeRdcc=" 
+         "value": "1BVtsOJwBu1ANst7QYgLnGN0RYFkb29sAVKMj7re44tpv1vOCZkFjIIlH26KBGeMdEP25PzuUGnt5S95Yu1YlIkneWUBHEJ6a8I4xZHNOdA1epTYSpgvhBI07269YgxNbx_o9uGn8z3fKMAqvHQl4oAZc0OERAOqKmt5MU01w5owD90bDofjH51z7YIrpvC6KEMxZSdmgx818l1GJhDTqRTiOEqG5pxfh1l34bf5MAxeR0QE-rr5tAWpJEkXI7YlHWkJR3VpqjIoflb55tB1cTs2SEv45CSFMtPfT2tPdlOcXQPJpGi_vFJfXv6X-y3VkkZ-LeI5H9rT7R-jzuM3jWL-_jqfIPgc=" 
       },
       "HEROKU_API_KEY": {
         "description": "Your Heroku API key, get it from 'https://dashboard.heroku.com/account'",
@@ -84,7 +84,7 @@
       "SUPPORT_CHAT": {
          "description": "Your Telegram support group chat username where your users will go and bother you with shit But be like: MyGroupChatUsernameBlah. If this ever points to masha support than consider you made an enemy.",
          "required": true,
-         "value": "akiratodosupport"
+         "value": "BoaHancock_Support"
       },
       "MONGO_DB_URI": {
          "description": "Required for database connections.",
@@ -102,12 +102,12 @@
      "EVENT_LOGS": {
          "description": "Event logs channel to note down important bot level events, recommend to make this public. ex: '-123456'",
          "required": true,
-         "value": "-1001792336449"
+         "value": "-1001584010815"
       },
       "JOIN_LOGGER": {
          "description": "A channel where bot will print who added it to what group, useful during debugging or spam handling.",
          "required": true,
-         "value": "-1001792336449"
+         "value": "-1001584010815"
       },      
       "CASH_API_KEY": {
          "description": "Required for currency converter. Get yours from https://www.alphavantage.co/support/#api-key",
