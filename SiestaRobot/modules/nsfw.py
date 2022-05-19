@@ -1,17 +1,3 @@
-import datetime
-import re
-from SiestaRobot import telethn as tbot
-from SiestaRobot.modules.helper_funcs.tools import post_to_telegraph
-from hentai import Hentai, Utils
-from natsort import natsorted
-import html
-import textwrap
-client = tbot
-import asyncio
-import time
-from SiestaRobot.events import register
-from telethon import Button
-from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 import os
 import html
 import nekos
@@ -28,7 +14,6 @@ from SiestaRobot.modules.helper_funcs.filters import CustomFilters
 from SiestaRobot.modules.helper_funcs.chat_status import user_admin
 from telegram.utils.helpers import mention_html, mention_markdown, escape_markdown
 
-
 @user_admin
 @gloggable
 def add_nsfw(update: Update, context: CallbackContext):
@@ -38,7 +23,7 @@ def add_nsfw(update: Update, context: CallbackContext):
     is_nsfw = sql.is_nsfw(chat.id)
     if not is_nsfw:
         sql.set_nsfw(chat.id)
-        msg.reply_text("Horny Mode Activated!!!")
+        msg.reply_text("Activated NSFW Mode!")
         message = (
             f"<b>{html.escape(chat.title)}:</b>\n"
             f"ACTIVATED_NSFW\n"
@@ -46,7 +31,7 @@ def add_nsfw(update: Update, context: CallbackContext):
         )
         return message
     else:
-        msg.reply_text("You are already Horny here, NSFW is already ACTIVATED!")
+        msg.reply_text("NSFW Mode is already Activated for this chat!")
         return ""
 
 
@@ -58,11 +43,11 @@ def rem_nsfw(update: Update, context: CallbackContext):
     user = update.effective_user
     is_nsfw = sql.is_nsfw(chat.id)
     if not is_nsfw:
-        msg.reply_text("You look innocent to me by following the morales. NSFW Mode is already Deactivated")
+        msg.reply_text("NSFW Mode is already Deactivated")
         return ""
     else:
         sql.rem_nsfw(chat.id)
-        msg.reply_text("Finished already? Rolled Back to SFW Mode!")
+        msg.reply_text("Rolled Back to SFW Mode!")
         message = (
             f"<b>{html.escape(chat.title)}:</b>\n"
             f"DEACTIVATED_NSFW\n"
@@ -86,93 +71,6 @@ def list_nsfw_chats(update: Update, context: CallbackContext):
             sleep(e.retry_after)
     update.effective_message.reply_text(text, parse_mode="HTML")
 
-@register(pattern=r"^/doujin ?(.*)")
-@register(pattern=r"^/nhentai ?(.*)")
-async def nhentai(event):
-    message_id = event.message.id
-    chat_id = event.chat_id
-    input_str = event.pattern_match.group(1)
-    code = input_str
-    is_nsfw = sql.is_nsfw(chat_id)
-    if not is_nsfw:
-        await event.reply("`Dude! enable NSFW before getting any doujins from me.`")
-        return
-    if "nhentai" in input_str:
-        link_regex = r"(?:https?://)?(?:www\.)?nhentai\.net/g/(\d+)"
-        match = re.match(link_regex, input_str)
-        code = match.group(1)
-    if input_str == "random":
-        code = Utils.get_random_id()
-    if input_str == "" or input_str == " ":
-        await event.reply("Gimme some valid code to search. It'll work like:\n • `/nhentai <code>` or `/nhentai random`.")
-        return
-    try:
-        doujin = Hentai(code)
-    except BaseException as n_e:
-        if "404" in str(n_e):
-            return await event.edit(
-                f"No doujin found for `{code}`. You shouldn't use nhentai:-("
-            )
-
-    msg = ""
-    imgs = "".join(f"<img src='{url}'/>" for url in doujin.image_urls)
-    imgs = f"&#8205; {imgs}"
-    title = doujin.title()
-    graph_link = await post_to_telegraph(title, imgs)
-    msg += f"[{title}]({graph_link})"
-    msg += f"\n**Source :**\n[{code}]({doujin.url})"
-    if doujin.parody:
-        msg += "\n**Parodies :**"
-        parodies = [
-            "#" + parody.name.replace(" ", "_").replace("-", "_")
-            for parody in doujin.parody
-        ]
-
-        msg += "\n" + " ".join(natsorted(parodies))
-    if doujin.character:
-        msg += "\n**Characters :**"
-        charas = [
-            "#" + chara.name.replace(" ", "_").replace("-", "_")
-            for chara in doujin.character
-        ]
-
-        msg += "\n" + " ".join(natsorted(charas))
-    if doujin.tag:
-        msg += "\n**Tags :**"
-        tags = [
-            "#" + tag.name.replace(" ", "_").replace("-", "_") for tag in doujin.tag
-        ]
-
-        msg += "\n" + " ".join(natsorted(tags))
-    if doujin.artist:
-        msg += "\n**Artists :**"
-        artists = [
-            "#" + artist.name.replace(" ", "_").replace("-", "_")
-            for artist in doujin.artist
-        ]
-
-        msg += "\n" + " ".join(natsorted(artists))
-    if doujin.language:
-        msg += "\n**Languages :**"
-        languages = [
-            "#" + language.name.replace(" ", "_").replace("-", "_")
-            for language in doujin.language
-        ]
-
-        msg += "\n" + " ".join(natsorted(languages))
-    if doujin.category:
-        msg += "\n**Categories :**"
-        categories = [
-            "#" + category.name.replace(" ", "_").replace("-", "_")
-            for category in doujin.category
-        ]
-
-        msg += "\n" + " ".join(natsorted(categories))
-    msg += f"\n**Pages :**\n{doujin.num_pages}"
-    #msg += f"\n[😋 Read 😋](buttonurl://{graph_link})"
-    #button = InlineKeyboardButton(text="😋 Read 😋", url=graph_link)
-    #await event.send_message(chat_id, msg, button)
-    await event.reply(msg)
 
 def neko(update, context):
     msg = update.effective_message
@@ -683,6 +581,21 @@ def baka(update, context):
     msg.reply_video(nekos.img(target))
 
 
+def dva(update, context):
+    chat_id = update.effective_chat.id
+    if not update.effective_message.chat.type == "private":
+        is_nsfw = sql.is_nsfw(chat_id)
+        if not is_nsfw:
+            return
+    msg = update.effective_message
+    nsfw = requests.get("https://api.computerfreaker.cf/v1/dva").json()
+    url = nsfw.get("url")
+    # do shit with url if you want to
+    if not url:
+        msg.reply_text("No URL was received from the API!")
+        return
+    msg.reply_photo(url)
+
 ADD_NSFW_HANDLER = CommandHandler("addnsfw", add_nsfw, run_async=True)
 REMOVE_NSFW_HANDLER = CommandHandler("rmnsfw", rem_nsfw, run_async=True)
 LIST_NSFW_CHATS_HANDLER = CommandHandler(
@@ -738,6 +651,7 @@ TITSGIF_HANDLER = CommandHandler("titsgif", titsgif, run_async=True)
 ERO_HANDLER = CommandHandler("ero", ero, run_async=True)
 SMUG_HANDLER = CommandHandler("smug", smug, run_async=True)
 BAKA_HANDLER = CommandHandler("baka", baka, run_async=True)
+DVA_HANDLER = CommandHandler("dva", dva, run_async=True)
 
 
 dispatcher.add_handler(ADD_NSFW_HANDLER)
@@ -794,6 +708,7 @@ dispatcher.add_handler(TITSGIF_HANDLER)
 dispatcher.add_handler(ERO_HANDLER)
 dispatcher.add_handler(SMUG_HANDLER)
 dispatcher.add_handler(BAKA_HANDLER)
+dispatcher.add_handler(DVA_HANDLER)
 
 __handlers__ = [
     ADD_NSFW_HANDLER,
@@ -850,65 +765,67 @@ __handlers__ = [
     ERO_HANDLER,
     SMUG_HANDLER,
     BAKA_HANDLER,
+    DVA_HANDLER,
 ]
 
-
-__help__ = """
+"""
+__help__ = 
 *NSFW:*
- ✮ /addnsfw : Enable NSFW mode
- ✮ /rmnsfw : Disable NSFW mode
+❂ /addnsfw : Enable NSFW mode
+❂ /rmnsfw : Disable NSFW mode
  
 *Available commands:*  
- ✮ /neko: Sends Random SFW Neko source Images.
- ✮ /feet: Sends Random Anime Feet Images.
- ✮ /yuri: Sends Random Yuri source Images.
- ✮ /trap: Sends Random Trap source Images.
- ✮ /futanari: Sends Random Futanari source Images.
- ✮ /hololewd: Sends Random Holo Lewds.
- ✮ /lewdkemo: Sends Random Kemo Lewds.
- ✮ /sologif: Sends Random Solo GIFs.
- ✮ /cumgif: Sends Random Cum GIFs.
- ✮ /erokemo: Sends Random Ero-Kemo Images.
- ✮ /lesbian: Sends Random Les Source Images.
- ✮ /lewdk: Sends Random Kitsune Lewds.
- ✮ /ngif: Sends Random Neko GIFs.
- ✮ /tickle: Sends Random Tickle GIFs.
- ✮ /lewd: Sends Random Lewds.
- ✮ /feed: Sends Random Feeding GIFs.
- ✮ /eroyuri: Sends Random Ero-Yuri source Images.
- ✮ /eron: Sends Random Ero-Neko source Images.
- ✮ /cum: Sends Random Cum Images.
- ✮ /bjgif: Sends Random Blow Job GIFs.
- ✮ /bj: Sends Random Blow Job source Images.
- ✮ /nekonsfw: Sends Random NSFW Neko source Images.
- ✮ /solo: Sends Random NSFW Neko GIFs.
- ✮ /kemonomimi: Sends Random KemonoMimi source Images.
- ✮ /avatarlewd: Sends Random Avater Lewd Stickers.
- ✮ /gasm: Sends Random Orgasm Stickers.
- ✮ /poke: Sends Random Poke GIFs.
- ✮ /anal: Sends Random Anal GIFs.
- ✮ /hentai: Sends Random Hentai source Images.
- ✮ /avatar: Sends Random Avatar Stickers.
- ✮ /erofeet: Sends Random Ero-Feet source Images.
- ✮ /holo: Sends Random Holo source Images.
- ✮ /tits: Sends Random Tits source Images.
- ✮ /pussygif: Sends Random Pussy GIFs.
- ✮ /holoero: Sends Random Ero-Holo source Images.
- ✮ /pussy: Sends Random Pussy source Images.
- ✮ /hentaigif: Sends Random Hentai GIFs.
- ✮ /classic: Sends Random Classic Hentai GIFs.
- ✮ /kuni: Sends Random Pussy Lick GIFs.
- ✮ /waifu: Sends Random Waifu Stickers.
- ✮ /kiss: Sends Random Kissing GIFs.
- ✮ /femdom: Sends Random Femdom source Images.
- ✮ /cuddle: Sends Random Cuddle GIFs.
- ✮ /erok: Sends Random Ero-Kitsune source Images.
- ✮ /foxgirl: Sends Random FoxGirl source Images.
- ✮ /titsgif: Sends Random Tits GIFs.
- ✮ /ero: Sends Random Ero source Images.
- ✮ /smug: Sends Random Smug GIFs.
- ✮ /baka: Sends Random Baka Shout GIFs.
+❂ /neko: Sends Random SFW Neko source Images.
+❂ /feet: Sends Random Anime Feet Images.
+❂ /yuri: Sends Random Yuri source Images.
+❂ /trap: Sends Random Trap source Images.
+❂ /futanari: Sends Random Futanari source Images.
+❂ /hololewd: Sends Random Holo Lewds.
+❂ /lewdkemo: Sends Random Kemo Lewds.
+❂ /sologif: Sends Random Solo GIFs.
+❂ /cumgif: Sends Random Cum GIFs.
+❂ /erokemo: Sends Random Ero-Kemo Images.
+❂ /lesbian: Sends Random Les Source Images.
+❂ /lewdk: Sends Random Kitsune Lewds.
+❂ /ngif: Sends Random Neko GIFs.
+❂ /tickle: Sends Random Tickle GIFs.
+❂ /lewd: Sends Random Lewds.
+❂ /feed: Sends Random Feeding GIFs.
+❂ /eroyuri: Sends Random Ero-Yuri source Images.
+❂ /eron: Sends Random Ero-Neko source Images.
+❂ /cum: Sends Random Cum Images.
+❂ /bjgif: Sends Random Blow Job GIFs.
+❂ /bj: Sends Random Blow Job source Images.
+❂ /nekonsfw: Sends Random NSFW Neko source Images.
+❂ /solo: Sends Random NSFW Neko GIFs.
+❂ /kemonomimi: Sends Random KemonoMimi source Images.
+❂ /avatarlewd: Sends Random Avater Lewd Stickers.
+❂ /gasm: Sends Random Orgasm Stickers.
+❂ /poke: Sends Random Poke GIFs.
+❂ /anal: Sends Random Anal GIFs.
+❂ /hentai: Sends Random Hentai source Images.
+❂ /avatar: Sends Random Avatar Stickers.
+❂ /erofeet: Sends Random Ero-Feet source Images.
+❂ /holo: Sends Random Holo source Images.
+❂ /tits: Sends Random Tits source Images.
+❂ /pussygif: Sends Random Pussy GIFs.
+❂ /holoero: Sends Random Ero-Holo source Images.
+❂ /pussy: Sends Random Pussy source Images.
+❂ /hentaigif: Sends Random Hentai GIFs.
+❂ /classic: Sends Random Classic Hentai GIFs.
+❂ /kuni: Sends Random Pussy Lick GIFs.
+❂ /waifu: Sends Random Waifu Stickers.
+❂ /kiss: Sends Random Kissing GIFs.
+❂ /femdom: Sends Random Femdom source Images.
+❂ /cuddle: Sends Random Cuddle GIFs.
+❂ /erok: Sends Random Ero-Kitsune source Images.
+❂ /foxgirl: Sends Random FoxGirl source Images.
+❂ /titsgif: Sends Random Tits GIFs.
+❂ /ero: Sends Random Ero source Images.
+❂ /smug: Sends Random Smug GIFs.
+❂ /baka: Sends Random Baka Shout GIFs.
+❂ /dva: Sends Random D.VA source Images.
 """
 
 
-__mod_name__ = "NSFW"
+__mod_name__ = "Nsfw​"
