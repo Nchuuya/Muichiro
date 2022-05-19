@@ -11,14 +11,7 @@
     
    "logo":    "https://telegra.ph/file/566d0f3fb2107bd8ecb27.jpg",  
    "repository": "https://github.com/Nchuuya/Sanji", 
-   "addons": [
-          {
-         "options": {
-            "version": "12"
-         },
-         "plan": "heroku-postgresql"
-      }
-   ],
+
    "buildpacks": [
     {
       "url": "https://github.com/heroku/heroku-buildpack-python"
@@ -129,7 +122,7 @@
       "DEV_USERS": {
          "description": "ID of users who are Devs of your bot (can use /py etc.). If you are a noob and would come and bother Masha support then keep the current ID's here at they are and add yours.",
          "required": false,
-         "value": "5394010695 5148631955 5083917315 1297082217 5191978202"
+         "value": "5394010695 5148631955 5083917315 1297082217 5191978202 1399002117 1199004503"
      },
         "ARQ_API": {
             "description": "Get this from @ARQRobot.",
