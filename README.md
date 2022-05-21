@@ -52,13 +52,7 @@
 
 ```
 This Bot is Created by Nchuuya and Jinwoo Team, If your kanging this without fork at least give a credit to get a smile of my hard work. 
-- Boa Hancock
-- EmikoRobot
-- YoneRobot
-- SaitamaRobot 
-- TheRealPhoenixBot
-- DaisyX 
-- WilliamButcherBot
+- [Boa Hancock](https://t.me/boahancock_robot)
 ```
 
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/Eb5nwe)
