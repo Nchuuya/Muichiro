@@ -1,9 +1,9 @@
 <h2 align="center">
-    ──「 BOA HANCOCK IS A MODULAR BOT WITH ONE PIECE THEME 」──
+    ──「 Nami IS A MODULAR BOT WITH ONE PIECE THEME 」──
 </h2>
 
 <p align="center">
-  <img src="https://telegra.ph/file/de2cba2944d8cbe948d11.jpg">
+  <img src="https://telegra.ph/file/fde11ba1834fb150e9f48.jpg">
 </p>
 
 <p align="center">
@@ -19,14 +19,14 @@
 </p>
 
 <p align="center">
-  <img src="https://c4.wallpaperflare.com/wallpaper/690/652/917/one-piece-boa-hancock-anime-girls-1125x938-anime-one-piece-hd-art-wallpaper-preview.jpg">
+  <img src="https://telegra.ph/file/314ae33f585a939a27ce9.jpg">
 </p>
 
 <h2 align="center">
     ──「 DEPLOY ON HEROKU 」──
 </h2>
 
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/Nchuuya/Hancock"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-purple?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/Nchuuya/Nami"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-purple?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
 
 
 <h2 align="center">
@@ -62,3 +62,4 @@ This Bot is Created by Nchuuya and Jinwoo Team, If your kanging this without for
 ```
 
 [![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/Eb5nwe)
+
