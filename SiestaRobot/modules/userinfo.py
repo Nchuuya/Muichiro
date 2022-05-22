@@ -48,7 +48,7 @@ from SiestaRobot.modules.helper_funcs.chat_status import sudo_plus
 from SiestaRobot.modules.helper_funcs.extraction import extract_user
 from SiestaRobot import telethn
 
-MIKU_IMG = "https://telegra.ph/file/de2cba2944d8cbe948d11.jpg"
+MIKU_IMG = "https://telegra.ph/file/d579eece6c034b2bee02b.jpg"
 
 def no_by_per(totalhp, percentage):
     """
@@ -240,10 +240,10 @@ def info(update: Update, context: CallbackContext):
     [
                         InlineKeyboardButton(
                              text="Health",
-                             url="https://t.me/boa_updates/99"),
+                             url="https://t.me/nami_updates/3"),
                        InlineKeyboardButton(
                              text="Disasters",
-                             url="https://t.me/boa_updates/98"),
+                             url="https://t.me/nami_updates/2"),
                     ],
     ]
     user_id = extract_user(update.effective_message, args)
@@ -316,16 +316,16 @@ def info(update: Update, context: CallbackContext):
     disaster_level_present = False
 
     if user.id == OWNER_ID:
-        text += "\n\nThis person is  ' My Husband'."
+        text += "\n\nThis person is  'Crew Caption'."
         disaster_level_present = True
     elif user.id in DEV_USERS:
-        text += "\n\nThis user is 'My Homie'."
+        text += "\n\nThis user is 'Crew Member'."
         disaster_level_present = True
     elif user.id in DRAGONS:
-        text += "\n\nThis person is 'My Boyfriend'."
+        text += "\n\nThis person is 'Nakama'."
         disaster_level_present = True
     elif user.id in DEMONS:
-        text += "\n\nThis person is ' My Follower'."
+        text += "\n\nThis person is 'Bounty Hunter'."
         disaster_level_present = True
     elif user.id in TIGERS:
         text += "\n\nThis person is 'My Hubbie'."
@@ -447,18 +447,6 @@ def stats(update, context):
     uptime = datetime.datetime.fromtimestamp(boot_time()).strftime("%Y-%m-%d %H:%M:%S")
     botuptime = get_readable_time((time.time() - StartTime))
     status = "*╒═══「 System statistics 」*\n\n"
-    status += "*✦ System Start time:* " + str(uptime) + "\n"
-    uname = platform.uname()
-    status += "*♡ System:* " + str(uname.system) + "\n"
-    status += "*✦ Node name:* " + escape_markdown(str(uname.node)) + "\n"
-    status += "*♡ Release:* " + escape_markdown(str(uname.release)) + "\n"
-    status += "*✦ Machine:* " + escape_markdown(str(uname.machine)) + "\n"
-    mem = virtual_memory()
-    cpu = cpu_percent()
-    disk = disk_usage("/")
-    status += "*♡ CPU:* " + str(cpu) + " %\n"
-    status += "*✦ RAM:* " + str(mem[2]) + " %\n"
-    status += "*♡ Storage:* " + str(disk[3]) + " %\n\n"
     status += "*✦ Python Version:* " + python_version() + "\n"
     status += "*♡ python-Telegram-Bot:* " + str(ptbver) + "\n"
     status += "*✦ Uptime:* " + str(botuptime) + "\n"
@@ -476,7 +464,7 @@ def stats(update, context):
                   [                  
                        InlineKeyboardButton(
                              text="Kazu~Kun",
-                             url="https://t.me/zer0hisoka")
+                             url="https://t.me/zerohisooka")
                      ] 
                 ]
             ),
@@ -489,17 +477,17 @@ def stats(update, context):
                         "\n*Bot statistics*:\n"
                         + "\n".join(mod.__stats__() for mod in STATS)
                     )
-                    + f"\n\n✦ [Support](https://t.me/{SUPPORT_CHAT}) | ✦ [Updates](https://t.me/boa_updates/99)\n\n"
+                    + f"\n\n✦ [Support](https://t.me/{SUPPORT_CHAT}) | ✦ [Updates](https://t.me/nami_updates)\n\n"
                 )
-                + "╘══「 by [Kazutora ♡](https://t.me/zer0hisoka) 」\n"
+                + "╘══「 by [Kazutora ♡](https://t.me/zerohisooka) 」\n"
             ),
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
                   [                  
                        InlineKeyboardButton(
-                             text="My GitHub acc",
-                             url="github.com/Nchuuya")
+                             text="Main Repo(NSFW!)",
+                             url="github.com/Nchuuya/namixd")
                      ] 
                 ]
             ),
