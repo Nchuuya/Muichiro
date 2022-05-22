@@ -216,9 +216,14 @@ def start(update: Update, context: CallbackContext):
                         ],
                         [
                             InlineKeyboardButton(text=gs(chat.id, "support_button"), url="https://t.me/BoaHancock_Support"),
+                            InlineKeyboardButton(text=gs(chat.id, "owner_button"), url="https://t.me/zerohisooka"),
                             
-                        
                         ],
+                        [
+                            InlineKeyboardButton(text=gs(chat.id, "update_button"), url="https://t.me/nami_updates"),
+                            
+                        ],
+
    
                     ]
                 ),
@@ -226,17 +231,18 @@ def start(update: Update, context: CallbackContext):
                 timeout=60,
             )
     else:
-        update.effective_message.reply_text(
-            text=gs(chat.id, "group_start_text").format(
+        update.effective_message.reply_photo(
+            MIKU_IMG,
+            caption=gs(chat.id, "group_start_text").format(
                 escape_markdown(uptime),
                 ),
 reply_markup=InlineKeyboardMarkup(
                     [
                         [
                             InlineKeyboardButton(
-                                "𝐌𝐲 𝐃𝐚𝐫𝐥𝐢𝐧𝐠 💕💖", url=f"https://t.me//zero-hisoka"),
+                                "My Darling", url=f"https://t.me//zerohisooka"),
                             InlineKeyboardButton(
-                                "•𝙰𝙷𝙹𝙸𝙽•", url=f"https://t.me/ahjinwoo_network")
+                                "Brahman", url=f"https://t.me/Brahman_network")
                 
                         ],
                     ]
