@@ -38,7 +38,7 @@ from SiestaRobot import (
 from SiestaRobot.modules import ALL_MODULES
 from SiestaRobot.modules.helper_funcs.chat_status import is_user_admin
 from SiestaRobot.modules.helper_funcs.misc import paginate_modules
-from SiestaRobot.script import MIKU_IMG,PM_PHOTO
+from SiestaRobot.script import MIKU_IMG, PM_PHOTO
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import (
     BadRequest,
@@ -222,7 +222,7 @@ def start(update: Update, context: CallbackContext):
                         [
                             InlineKeyboardButton(text=gs(chat.id, "update_button"), url="https://t.me/nami_updates"),
                             
-                        ],
+                        ]
 
    
                     ]
@@ -232,7 +232,7 @@ def start(update: Update, context: CallbackContext):
             )
     else:
         update.effective_message.reply_photo(
-            MIKU_IMG,
+            random.choice(MIKU_IMG),
             caption=gs(chat.id, "group_start_text").format(
                 escape_markdown(uptime),
                 ),
@@ -375,7 +375,7 @@ def help_button(update, context):
 
         elif back_match:
             query.message.edit_photo(
-                PM_PHOTO,
+                random.choice(PM_PHOTO),
                 caption=gs(chat.id,"pm_help_text"),
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
@@ -585,8 +585,9 @@ def get_help(update: Update, context: CallbackContext):
                 parse_mode=ParseMode.MARKDOWN,
             )
             return
-        update.effective_message.reply_text(
-            text=gs(chat.id, "group_help_text"),
+        update.effective_message.reply_photo(
+            random.choice(PM_PHOTO),
+            caption=gs(chat.id, "group_help_text"),
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
