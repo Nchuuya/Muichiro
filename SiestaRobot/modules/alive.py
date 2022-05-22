@@ -9,7 +9,7 @@ from pyrogram import __version__ as pyrover
 from SiestaRobot.events import register
 from SiestaRobot import telethn as tbot
 
-PHOTO = "https://telegra.ph/file/55cf7b01ddded42c6fbd0.mp4"
+PHOTO = "https://telegra.ph/file/c0770d0f83f377079725c.mp4"
 
 @register(pattern=("/alive"))
 async def awake(event):
