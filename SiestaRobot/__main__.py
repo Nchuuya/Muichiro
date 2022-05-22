@@ -38,7 +38,7 @@ from SiestaRobot import (
 from SiestaRobot.modules import ALL_MODULES
 from SiestaRobot.modules.helper_funcs.chat_status import is_user_admin
 from SiestaRobot.modules.helper_funcs.misc import paginate_modules
-from SiestaRobot.script import MIKU_IMG
+from SiestaRobot.script import MIKU_IMG,PM_PHOTO
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Update
 from telegram.error import (
     BadRequest,
@@ -374,8 +374,9 @@ def help_button(update, context):
             )
 
         elif back_match:
-            query.message.edit_text(
-                text=gs(chat.id,"pm_help_text"),
+            query.message.edit_photo(
+                PM_PHOTO,
+                caption=gs(chat.id,"pm_help_text"),
                 parse_mode=ParseMode.MARKDOWN,
                 reply_markup=InlineKeyboardMarkup(
                     paginate_modules(0, HELPABLE, "help")
