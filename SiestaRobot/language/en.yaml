@@ -9,16 +9,16 @@ set_chat_lang: "Great, using {} Language it is from now on!"
 
 # PM Text
 pm_start_text: |
-  *Hey Darling, {} ♡*
-  "𝙸𝚏 𝚢𝚘𝚞 𝚝𝚑𝚒𝚗𝚔 𝙸'𝚖 𝚓𝚞𝚜𝚝 𝚊𝚗𝚘𝚝𝚑𝚎𝚛 𝚌𝚞𝚝𝚎 𝚐𝚒𝚛𝚕, 𝚢𝚘𝚞'𝚛𝚎 𝚍𝚎𝚊𝚍 𝚠𝚛𝚘𝚗𝚐!"
-  𝙸 𝚊𝚖 𝙽𝚊𝚖𝚒,  𝙸'𝚕𝚕 𝚑𝚊𝚟𝚎 𝚖𝚊𝚙𝚙𝚎𝚍 𝚘𝚞𝚝 𝚝𝚑𝚎 𝚎𝚗𝚝𝚒𝚛𝚎 𝚠𝚘𝚛𝚕𝚍!
+  *matte matte, {} ♡*
+  𝙸𝚏 𝚢𝚘𝚞 𝚝𝚑𝚒𝚗𝚔 𝙸'𝚖 𝚓𝚞𝚜𝚝 𝚊𝚗𝚘𝚝𝚑𝚎𝚛 𝚌𝚞𝚝𝚎 𝚐𝚒𝚛𝚕, 𝚢𝚘𝚞'𝚛𝚎 𝚍𝚎𝚊𝚍 𝚠𝚛𝚘𝚗𝚐!
+  𝙸 𝚊𝚖 N𝚊𝚖𝚒 ♡,  𝙸'𝚕𝚕 𝚑𝚊𝚟𝚎 𝚖𝚊𝚙𝚙𝚎𝚍 𝚘𝚞𝚝 𝚝𝚑𝚎 𝚎𝚗𝚝𝚒𝚛𝚎 𝚠𝚘𝚛𝚕𝚍!
   click 𝚑𝚎𝚕𝚙 𝚝𝚘 𝚔𝚗𝚘𝚠 𝚖𝚘𝚛𝚎
   • *ᴜᴘᴛɪᴍᴇ:* {}
   • {} *ᴜꜱᴇʀ, ᴀᴄʀᴏꜱꜱ* {} *ᴄʜᴀᴛꜱ.*
 
    
 group_start_text: |
-  *💖 Hi Darling, I'm Boa Hancock! Everyone Here i Love You all just make sure i am admin for Voice Chat*[💕](https://telegra.ph/file/81fcd6895c2d27fc939b4.mp4)
+  *𝚂𝚘𝚛𝚛𝚢, 𝚋𝚞𝚝 𝙸 𝚍𝚘𝚗'𝚝 𝚑𝚊𝚟𝚎 𝚝𝚒𝚖𝚎 𝚝𝚘 𝚏𝚘𝚘𝚕 𝚊𝚛𝚘𝚞𝚗𝚍 𝚠𝚒𝚝𝚑 𝚢𝚘𝚞!*
   
   *Started active since :* `{}`
 
@@ -60,7 +60,7 @@ pm_about_credit_text: |
 
   Here Developers Making And Give Inspiration For Made The Boa Robot
 pm_help_text: |
-  *✺ Click on the button bellow to get description about specifics command. ✺*
+  *✺ I am Nami ♡ Smartest memeber of Strawhat Crew here to manage ur Crew with My abilities I can Forecast before it happened so feel free , To lnow more See my abilities in detail by clicking them ✺*
 pm_help_module_text: "Here is the help for the *{}* module :\n\n"
 
 # Group Help Text
@@ -90,11 +90,11 @@ notes_button: "𝐍𝐨𝐭𝐞𝐬"
 source_button: "𝐒𝐨𝐮𝐫𝐜𝐞 𝐂𝐨𝐝𝐞"
 
 
-help_button: "ʜᴇʟᴘ 🌟"
-updates_button: "ʙᴏᴀ ʜᴀɴᴄᴏᴄᴋ ᴜᴘᴅᴀᴛᴇꜱ ✨"
+help_button: "ʜᴇʟᴘ ♡"
+updates_button: "ᴜᴘᴅᴀᴛᴇꜱ ♡ "
 animechat_button: "ᴀɴɪᴍᴇ ᴄʜᴀᴛ 💠"
-support_button: "ꜱᴜᴘᴘᴏʀᴛ🚨"
-owner_button: "ᴋᴀᴢᴜᴛᴏʀᴀ ʜᴀɴᴇᴍɪʏᴀ 🛐"
+support_button: "ꜱᴜᴘᴘᴏʀᴛ ♡"
+owner_button: "ᴋᴀᴢᴜᴛᴏʀᴀ ʜᴀɴᴇᴍɪʏᴀ ♡"
 
 # MODULES
 admin_help: |
@@ -817,15 +817,15 @@ pin_button: "👉 Go to message"
 # Afk.py Variabel
 reason_len: "\nYour afk reason was shortened to 100 characters."
 afk: "{} is now away! {}"
-afk_array1: "{} is here!"
-afk_array2: "{} is back!"
-afk_array3: "{} is now in the chat!"
-afk_array4: "{} is awake!"
-afk_array5: "{} is back online!"
-afk_array6: "{} is finally here!"
-afk_array7: "Welcome back! {}"
+afk_array1: "{} chotto matte!"
+afk_array2: "{} why u here even go and stop flexing cause u can't handle my beauty!"
+afk_array3: "{} I know You are Busy with ur Girlfriend/Boyfriend aren't you"
+afk_array4: "{} You lost like Zoro aren't you!"
+afk_array5: "{} Stop pretending that u are afk we all know u were Online and reading messages!"
+afk_array6: "{} Oye Why u come back Man i am just about to kiss Zerohisoka!"
+afk_array7: "You just! {}"
 afk_array8: "Where is {}?\nIn the chat!"
-afk_check: "{} is afk"
+afk_check: "{} He is Busy Don't Tag afk People's"
 afk_check_reason: "{} is afk.\nReason: <code>{}</code>"
 
 # Antichannel.py Variabel
