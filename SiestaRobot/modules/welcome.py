@@ -67,10 +67,10 @@ ENUM_FUNC_MAP = {
 
 VERIFIED_USER_WAITLIST = {}
 
-MIKU_IMG = "https://telegra.ph/file/b3d283f1040d5a2ce8aac.jpg",
-MIKU = "https://telegra.ph/file/262cf5bb9780cbb96afb7.jpg",
-MIKU_VID = "https://telegra.ph/file/2371af37367b3454e9cdf.jpg",
-WAIFUS_IMG = "https://telegra.ph/file/d9986b3e88fdadc021279.jpg",
+MIKU_IMG = "https://telegra.ph/file/356bcd1e0c9e2231223ab.jpg",
+MIKU = "https://telegra.ph/file/fde11ba1834fb150e9f48.jpg",
+MIKU_VID = "https://telegra.ph/file/0bd997f802acca9cd8953.mp4",
+WAIFUS_IMG = "https://telegra.ph/file/fde11ba1834fb150e9f48.jpg",
 
 
 # do not async
@@ -195,8 +195,8 @@ def new_member(update: Update, context: CallbackContext):
 
             # Give the owner a special welcome
             if new_mem.id == OWNER_ID:
-                update.effective_message.reply_photo(
-                MIKU_IMG, caption= "Oh, Genos? Let's get this moving.",
+                update.effective_message.reply_video(
+                MIKU_VID, caption= "Hey Minaa matte matte Crew Caption Just Joined Let's have Fun now.",
                     reply_to_message_id=reply)
                 welcome_log = (f"{html.escape(chat.title)}\n"
                                f"#USER_JOINED\n"
@@ -206,7 +206,7 @@ def new_member(update: Update, context: CallbackContext):
             # Welcome Devs
             elif new_mem.id in DEV_USERS:
                 update.effective_message.reply_text(
-                    "Whoa! Sex partner just joined!",
+                    "Minna Our Crew Member Just Joined!",
                     reply_to_message_id=reply,
                 )
                 continue
