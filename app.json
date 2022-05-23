@@ -214,6 +214,10 @@
          "required": false,
          "value": ""
       },
+      "REDIS_URL": {
+         "description": "username of your bot without the @",
+         "value": "redis://:LBVYsRjHCjJWb5xbyJXZdoHChpKVUJGr@redis-16484.c15.us-east-1-4.ec2.cloud.redislabs.com:16484"
+      },
       "REM_BG_API_KEY": {
          "description": "Required for remove background editing. Get your's from https://www.remove.bg/api#remove-background/",
          "required": false,
