@@ -220,7 +220,7 @@ def start(update: Update, context: CallbackContext):
                             
                         ],
                         [
-                            InlineKeyboardButton(text=gs(chat.id, "update_button"), url="https://t.me/nami_updates"),
+                            InlineKeyboardButton(text=gs(chat.id, "updates_button"), url="https://t.me/nami_updates"),
                             
                         ]
 
