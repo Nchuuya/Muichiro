@@ -120,6 +120,11 @@ WAIFUS_PIC = (
     "Kurumi tokisaki",
     "Shinobu kochou",
     "Nezuko kamado"
+    "Nami",
+    "Nico Robin",
+    "Boa Hancock",
+    "Viola",
+    "Yuno Gasai",
     "Himawari uzumaki",
     "Kaguya shinomiya",
     "Kanae kochou",
