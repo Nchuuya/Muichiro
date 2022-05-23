@@ -4,6 +4,7 @@ import time
 
 import SiestaRobot.modules.fun_strings as fun_strings
 from SiestaRobot import dispatcher
+from SiestaRobot import DRAGONS
 from SiestaRobot.modules.disable import DisableAbleCommandHandler
 from SiestaRobot.modules.helper_funcs.chat_status import is_user_admin
 from SiestaRobot.modules.helper_funcs.extraction import extract_user
@@ -316,9 +317,152 @@ def weebify(update: Update, context: CallbackContext):
 def helps(chat):
     return gs(chat, "fun_help")
 
+
+def gbam(update, context):
+    user = update.effective_user
+    chat = update.effective_chat
+    bot, args = context.bot, context.args
+    message = update.effective_message
+
+    curr_user = html.escape(message.from_user.first_name)
+    user_id = extract_user(message, args)
+
+    if user_id:
+        gbam_user = bot.get_chat(user_id)
+        user1 = curr_user
+        user2 = html.escape(gbam_user.first_name)
+
+    else:
+        user1 = curr_user
+        user2 = bot.first_name
+
+    if update.effective_message.chat.type == "private":
+        return
+    if int(user.id) in DRAGONS or int(user.id) in DEMONS:
+        gbamm = fun_strings.GBAM
+        reason = random.choice(fun_strings.GBAM_REASON)
+        gbam = gbamm.format(user1=user1, user2=user2, chatid=chat.id, reason=reason)
+        context.bot.sendMessage(chat.id, gbam, parse_mode=ParseMode.HTML)
+	
+def flirt(update: Update, context: CallbackContext):
+    reply_text = update.effective_message.reply_to_message.reply_text if update.effective_message.reply_to_message else update.effective_message.reply_text
+    reply_text(random.choice(fun_strings.FLIRT_TEXT))
+	
+def romance(update: Update, context: CallbackContext):
+	bot = context.bot
+	args = context.args
+	message = update.effective_message
+
+	reply_to = message.reply_to_message or message
+
+	curr_user = html.escape(message.from_user.first_name)
+	user_id = extract_user(message, args)
+
+	if user_id:
+	    romantic_user = bot.get_chat(user_id)
+	    user1 = curr_user
+	    user2 = html.escape(romantic_user.first_name)
+
+	else:
+	    user1 = bot.first_name
+	    user2 = curr_user
+
+	romance_type = random.choice(("Text", "Gif", "Sticker"))
+	if romance_type == "Gif":
+	    try:
+	        temp = random.choice(fun_strings.ROMANCE_GIFS)
+	        reply_to.reply_animation(temp)
+	    except BadRequest:
+	        romance_type = "Text"
+
+	if romance_type == "Sticker":
+	    try:
+	        temp = random.choice(fun_strings.ROMANCE_STICKERS)
+	        reply_to.reply_sticker(temp)
+	    except BadRequest:
+	        romance_type = "Text"
+
+	if romance_type == "Text":
+	    temp = random.choice(fun_strings.ROMANCE_TEMPLATES)
+	    reply = temp.format(user1=user1, user2=user2)
+	    reply_to.reply_text(reply, parse_mode=ParseMode.HTML)
+	
+def owo(update: Update, context: CallbackContext):
+	bot = context.bot
+	args = context.args
+	message = update.effective_message
+
+	reply_to = message.reply_to_message or message
+
+	curr_user = html.escape(message.from_user.first_name)
+	user_id = extract_user(message, args)
+
+	if user_id:
+	    owo_user = bot.get_chat(user_id)
+	    user1 = curr_user
+	    user2 = html.escape(owo_user.first_name)
+
+	else:
+	    user1 = bot.first_name
+	    user2 = curr_user
+
+	owo_type = random.choice(("Gif", "Sticker"))
+	if owo_type == "Gif":
+	    try:
+	        temp = random.choice(fun_strings.OWO_GIFS)
+	        reply_to.reply_animation(temp)
+	    except BadRequest:
+	        owo_type = "Text"
+
+	if owo_type == "Sticker":
+	    try:
+	        temp = random.choice(fun_strings.OWO_STICKERS)
+	        reply_to.reply_sticker(temp)
+	    except BadRequest:
+	        owo_type = "Text"
+
+def uwu(update: Update, context: CallbackContext):
+	bot = context.bot
+	args = context.args
+	message = update.effective_message
+
+	reply_to = message.reply_to_message or message
+
+	curr_user = html.escape(message.from_user.first_name)
+	user_id = extract_user(message, args)
+
+	if user_id:
+	    uwu_user = bot.get_chat(user_id)
+	    user1 = curr_user
+	    user2 = html.escape(uwu_user.first_name)
+
+	else:
+	    user1 = bot.first_name
+	    user2 = curr_user
+
+	uwu_type = random.choice(("Gif", "Sticker"))
+	if uwu_type == "Gif":
+	    try:
+	        temp = random.choice(fun_strings.UWU_GIFS)
+	        reply_to.reply_animation(temp)
+	    except BadRequest:
+	        uwu_type = "Text"
+
+	if uwu_type == "Sticker":
+	    try:
+	        temp = random.choice(fun_strings.UWU_STICKERS)
+	        reply_to.reply_sticker(temp)
+	    except BadRequest:
+	        uwu_type = "Text"
+	
+def sex(update: Update, context: CallbackContext):
+    reply_text = update.effective_message.reply_to_message.reply_text if update.effective_message.reply_to_message else update.effective_message.reply_text
+    reply_text(random.choice(fun_strings.SEX_TEXT))
+
 SANITIZE_HANDLER = DisableAbleCommandHandler("sanitize", sanitize, run_async=True)
 RUNS_HANDLER = DisableAbleCommandHandler("runs", runs, run_async=True)
 SLAP_HANDLER = DisableAbleCommandHandler("slap", slap, run_async=True)
+FLIRT_HANDLER = DisableAbleCommandHandler("flirt", flirt,run_async=True) 
 PAT_HANDLER = DisableAbleCommandHandler("pat", pat, run_async=True)
 ROLL_HANDLER = DisableAbleCommandHandler("roll", roll, run_async=True)
 TOSS_HANDLER = DisableAbleCommandHandler("toss", toss, run_async=True)
@@ -330,11 +474,17 @@ EIGHTBALL_HANDLER = DisableAbleCommandHandler("8ball", eightball, run_async=True
 TABLE_HANDLER = DisableAbleCommandHandler("table", table, run_async=True)
 SHOUT_HANDLER = DisableAbleCommandHandler("shout", shout, run_async=True)
 WEEBIFY_HANDLER = DisableAbleCommandHandler("weebify", weebify, run_async=True)
+GBAM_HANDLER = DisableAbleCommandHandler("gbam", gbam, run_async=True)
+ROMANCE_HANDLER = DisableAbleCommandHandler("romance", romance, run_async=True)
+OWO_HANDLER = DisableAbleCommandHandler("owo", owo, run_async=True)
+SEX_HANDLER = DisableAbleCommandHandler("sex", sex, run_async=True)
+UWU_HANDLER = DisableAbleCommandHandler("uwu", uwu, run_async=True)
 
 dispatcher.add_handler(WEEBIFY_HANDLER)
 dispatcher.add_handler(SHOUT_HANDLER)
-dispatcher.add_handler(SANITIZE_HANDLER)
+dispatcher.add_handler(SANITIZE_HANDLER) 
 dispatcher.add_handler(RUNS_HANDLER)
+dispatcher.add_handler(FLIRT_HANDLER)
 dispatcher.add_handler(SLAP_HANDLER)
 dispatcher.add_handler(PAT_HANDLER)
 dispatcher.add_handler(ROLL_HANDLER)
@@ -343,12 +493,18 @@ dispatcher.add_handler(SHRUG_HANDLER)
 dispatcher.add_handler(BLUETEXT_HANDLER)
 dispatcher.add_handler(RLG_HANDLER)
 dispatcher.add_handler(DECIDE_HANDLER)
+dispatcher.add_handler(ROMANCE_HANDLER)
 dispatcher.add_handler(EIGHTBALL_HANDLER)
 dispatcher.add_handler(TABLE_HANDLER)
+dispatcher.add_handler(GBAM_HANDLER)
+dispatcher.add_handler(OWO_HANDLER)
+dispatcher.add_handler(UWU_HANDLER)
+dispatcher.add_handler(SEX_HANDLER)
 
 __mod_name__ = "Fun"
 __command_list__ = [
     "runs",
+    "sex",
     "slap",
     "roll",
     "toss",
@@ -357,11 +513,16 @@ __command_list__ = [
     "rlg",
     "decide",
     "table",
+    "gbam",
+    "flirt",
+    "romance",
     "pat",
     "sanitize",
     "shout",
     "weebify",
     "8ball",
+    "uwu",
+    "owo",
 ]
 __handlers__ = [
     RUNS_HANDLER,
@@ -370,12 +531,20 @@ __handlers__ = [
     ROLL_HANDLER,
     TOSS_HANDLER,
     SHRUG_HANDLER,
+    OWO_HANDLER,
+    UWU_HANDLER,
     BLUETEXT_HANDLER,
     RLG_HANDLER,
     DECIDE_HANDLER,
     TABLE_HANDLER,
+    FLIRT_HANDLER,
     SANITIZE_HANDLER,
     SHOUT_HANDLER,
+    ROMANCE_HANDLER,
     WEEBIFY_HANDLER,
+    SEX_HANDLER,	
+    UWU_HANDLER,
+    OWO_HANDLER,
     EIGHTBALL_HANDLER,
+    GBAM_HANDLER,
 ]
