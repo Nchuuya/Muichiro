@@ -444,7 +444,6 @@ TABLE = (
     "I ran out of tables, will order more.",
     "Go do some work instead of flippin tables.",
 )
-
 GBAM = "<b>Beginning Of Global Bam For {user2}</b>  \n \nChat Id : <code>{chatid}</code> \nReason : <i>{reason}</i> \nGBammed By {user1}"
 
 
