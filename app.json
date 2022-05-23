@@ -50,7 +50,7 @@
       "STRING_SESSION": {
          "description": "Fill with telethon string session.",
          "required": true,
-         "value": "1BVtsOJwBu1ANst7QYgLnGN0RYFkb29sAVKMj7re44tpv1vOCZkFjIIlH26KBGeMdEP25PzuUGnt5S95Yu1YlIkneWUBHEJ6a8I4xZHNOdA1epTYSpgvhBI07269YgxNbx_o9uGn8z3fKMAqvHQl4oAZc0OERAOqKmt5MU01w5owD90bDofjH51z7YIrpvC6KEMxZSdmgx818l1GJhDTqRTiOEqG5pxfh1l34bf5MAxeR0QE-rr5tAWpJEkXI7YlHWkJR3VpqjIoflb55tB1cTs2SEv45CSFMtPfT2tPdlOcXQPJpGi_vFJfXv6X-y3VkkZ-LeI5H9rT7R-jzuM3jWL-_jqfIPgc=" 
+         "value": "1BVtsOIcBu4rAAMlX9K2utAT56NiZmxk1IF4JtjcChNNfbKtwitloSF6I1cvuKrX9zfv5fvgqpIWloZkPJiNxRB37mQqXLlCw8rccjBfJSqxxoUfeVC1Kv-XiAUh-5bc6fOaBO8YM1cev4YtSzfYZW1HlvGs_MifkcOHp8zkEDB0N726e_aWFghOjqkhejKRWCd5DLUML-Vw61mQm0MsyrypCgzoEwF2TECzeAqMIAtcdHJCII5m-iOuhYZ3C6JOrvUNrAq5ZhIUxmm7LsvKXsROR2wbG1657-nDbq1n_swTRoNkke0ct4h9z6_9N5nxr-nfigFOx4-HrkqSSJ9ypMeuSzkHXxbE=" 
       },
       "HEROKU_API_KEY": {
         "description": "Your Heroku API key, get it from 'https://dashboard.heroku.com/account'",
