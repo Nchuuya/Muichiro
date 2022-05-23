@@ -246,7 +246,7 @@ finally:
         "[NAMI]: Connection To The Shasa • Data Center • Mumbai • Redis Database Established Successfully!"
     )
 
-SYL = Sylviorus()
+
 
 if not SPAMWATCH_API:
     sw = None
