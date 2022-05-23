@@ -69,6 +69,9 @@ ENUM_FUNC_MAP = {
     sql.Types.VIDEO.value: dispatcher.bot.send_video,
 }
 
+NAMI_IMG = "https://telegra.ph/file/0bd997f802acca9cd8953.mp4"
+NAMI_XD = "https://telegra.ph/file/9dfd1212b7dc0fc6b390b.jpg"
+
 VERIFIED_USER_WAITLIST = {}
 CAPTCHA_ANS_DICT = {}
 
@@ -199,8 +202,9 @@ def new_member(update: Update, context: CallbackContext):  # sourcery no-metrics
 
             # Give the owner a special welcome
             if new_mem.id == OWNER_ID:
-                update.effective_message.reply_text(
-                    f"Welcome to {html.escape(chat.title)} my king.", reply_to_message_id=reply
+                update.effective_message.reply_photo(
+                     NAMI_XD,
+                    f" My Caption Joined This New Crew {html.escape(chat.title)} .", reply_to_message_id=reply
                 )
                 welcome_log = (
                     f"{html.escape(chat.title)}\n"
