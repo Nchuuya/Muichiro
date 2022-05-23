@@ -444,3 +444,121 @@ TABLE = (
     "I ran out of tables, will order more.",
     "Go do some work instead of flippin tables.",
 )
+
+GBAM = "<b>Beginning Of Global Bam For {user2}</b>  \n \nChat Id : <code>{chatid}</code> \nReason : <i>{reason}</i> \nGBammed By {user1}"
+
+
+GBAM_REASON = (
+    "sasta noob",
+    "sasta waifu stealer",
+    "sasta white-het hekur",
+    "sasta white-het codur",
+    "sasta white-het vala chintu",
+    "sasta hexa hekur",
+    "sasta hexa playur",
+    "sasta tiktokur💃🏾",
+    "sasta membor of team 7",
+    "sasta selmon boi",
+    "sasta fri-fire player",
+    "sasta chhota bhim",
+    "sasta chhapri",
+    "sasta jony sin",
+    "sasta chhapri nibba",
+    "sasta nibba",
+    "sasti ria chokroborti",
+    "sasti nibbi",
+    "sasta camper",
+)
+
+FLIRT_TEXT = (
+    "I hope you know CPR, because you just took my breath away!",
+    "So, aside from taking my breath away, what do you do for a living?",
+    "I ought to complain to Spotify for you not being named this week’s hottest single.",
+    "Your eyes are like the ocean; I could swim in them all day.",
+    "When I look in your eyes, I see a very kind soul",
+    "If you were a vegetable, you’d be a ‘cute-cumber.’",
+    "Do you happen to have a Band-Aid? ‘Cause I scraped my knees falling for you.",
+    "I didn’t know what I wanted in a woman until I saw you.",
+    "I was wondering if you could tell me: If you’re here, who’s running Heaven?",
+    "No wonder the sky is gray tonight , cause all the color is in your eyes.",
+    "You’ve got everything I’ve been searching for, and believe me—I’ve been looking a long time.",
+    "Do you have a map? I just got lost in your eyes.",
+    "*Cough* *clear throat*\nAre you a guitar? Cuz I wanna grab your neck and listen to the noise u make while I'm playing with you\n*winks*",
+    "Are you an electrician? Because you’re definitely lighting up my day/night!",
+    "Are you Netflix? Cause I can look at you the whole day without getting boared",
+    "I’ve heard it said that kissing is the ‘language of love.’ Would you care to have a conversation with me about it sometime?",
+    "Oh you're single?\nI wonder why you're not on the Spotify hot singles list",
+    "I was wondering if you’re an artist because you were so good at drawing me in.",
+    "Do you ever get tired from running through my thoughts all night?",
+)
+
+ROMANCE_GIFS = [
+    "CgACAgQAAxkBAAIQIWC0g6ovGy7YT-Y66XfpFVEKwTXKAAJ8AgACTu6sUN0m69FQv9tHHwQ",
+    "CgACAgQAAxkBAAIQImC0g62lTsbdQtBB5fY4tX5s9vP8AAJyAgACHdY1UTlYUpF2JAABcx8E",
+    "CgACAgQAAxkBAAIQI2C0g7nn-TRjwilr59dtctGb_cLlAAJ6AgACNkelUhxvFpZgDUbFHwQ",
+    "CgACAgQAAxkBAAIQJGC0g8L4cYfXRxE42YOTOcTCn8d9AAIoAgACqhGMUnPCWXH2RqPwHwQ",
+    "CgACAgQAAxkBAAIQJWC0g9GEFeRewmfL7Ei4ZaCdQ9p4AAIEAgAC_3xlUB5O5hIl3CbxHwQ",
+    "CgACAgQAAxkBAAIQJmC0g92L9jTq89JBieJCumwYCFPwAAIiAgAC1z2UUlOhsI6CxkHXHwQ"
+] 
+
+ROMANCE_STICKERS = [
+    "CAACAgQAAxkBAAIQM2C0hTjoZ6imrf90bzPD6RmGkl2ZAAJaLgAClGBOA7Ky9sn-fqeXHwQ",
+    "CAACAgQAAxkBAAIQNGC0hT2OqiTvCvXzONyRU8PfXejQAAJ1LgAClGBOA5yx5Lp5F-ILHwQ",
+    "CAACAgQAAxkBAAIQNWC0hT9jlDuleEyc_FOs9IBVmISYAAJ2LgAClGBOA5rDqeCOsXHNHwQ",
+    "CAACAgQAAxkBAAIQNmC0hUprZQ43ncln60H8tN2Df5Z2AAKILgAClGBOA28NiCHVy1AKHwQ",
+    "CAACAgQAAxkBAAIQN2C0hUu7-A7rehNrLRHCAxZVMTTnAAKHLgAClGBOA3wWNsqsCiN6HwQ"
+]
+
+ROMANCE_TEMPLATES = (
+    "I knew I’d never be able to remember what {user2} wore that day. But I also knew I’d never forget the way she looked.",
+    "So it’s not gonna be easy. It’s gonna be really hard. We’re gonna have to work at this every day, but I want to do that because I want you. I want all of you, forever, you and me, every day.",
+    "I wish I knew how to quit you.",
+    "Make me a radio and turn me up when you feel low.",
+    "I can't see anything that I don't like about you."
+)
+
+UWU_GIFS = [
+    "CgACAgQAAxkBAAIN4GJD65bk2RdnvbMLzqe7687ZYDNDAAIoAwACvqS0Uq90GlFhzjt4IwQ",
+    "CgACAgQAAxkBAAIN4WJD65406q4a0KdLA-RHS49d6siHAAIrAwACLkS1Uo0LJImx225UIwQ",
+    "CgACAgQAAxkBAAIN4mJD66dMG24D1eBUfKAfYrmQgZugAAL_AgACCJrFUknN7Zt8SjAkIwQ",
+    "CgACAgQAAxkBAAIN42JD67een8P09snrzvPZFm8MMVxSAALwAgACCCa9UoKU6Rzp31FJIwQ",
+    "CgACAgQAAxkBAAIN5GJD68X-1U2fU1l1HAcJZtgBCWd5AAL7AgAC1s-1UoZxIW386nZnIwQ",
+    "CgACAgQAAxkBAAIN5WJD69oQoI5hDU7Lz9ky7KXgn6k5AAL6AgACdh-8UkEfmSkVJgd7IwQ",
+    "CgACAgQAAxkBAAIN5mJD6-eiMllgeB3BAhL0Y-mruBZeAAILAwACrp-1Urt7B_vazoYxIwQ",
+    "CgACAgQAAxkBAAIN52JD7AIwj0Ev1RMzymO-LKtNj_0JAAJnAwACbDQcUkqXsKfdzZfTIwQ"
+]
+
+UWU_STICKERS = [
+    "CAACAgUAAxkBAAIQdWC0moF88wE72wmUeaOLMc342mF4AAIUAwACk6CgVWhMjd9B5B1FHwQ",
+    "CAACAgUAAxkBAAIQeGC0mplxufMmOxW3UjkV92OjQFYxAAJMAwAC5ryoVZ68beJeQJcYHwQ",
+    "CAACAgUAAx0CS3FrwgABA7lJYN6trj9IFjVBUefGCf3XtAHB8GUAAs8DAAKT3NFVjFwwcs1XzRYgBA"
+]
+
+OWO_GIFS = [
+    "CgACAgQAAx0CTrSSlQABDm2_YkPp8HL9wzeSCe8n3gWyKZJfJkAAAkYDAAJTvLxSRqXH9mrHH7ojBA",
+    "CgACAgQAAxkBAAIN1GJD6loSc-oFdNFVCabk1Lz53_s5AAL2AgACT_O9UrNCKSfX9CCqIwQ",
+    "CgACAgQAAxkBAAIN1WJD6lwsQ2unUCKUYm-EiHY4CEsWAALyAgACvHu9UkC2y7NU6gqvIwQ",
+    "CgACAgQAAxkBAAIN1mJD6l0mt1ndgT3wUfZbPNVI-hCsAAJLAwACXte8UiP4rSzNmu0YIwQ",
+    "CgACAgQAAxkBAAIN12JD6l0E3mXpbveK_11svwoRQvD5AALXAgACzU69UvlPyUAh-Lq0IwQ"
+]
+
+OWO_STICKERS = [
+    "CAACAgEAAx0CRf9PfgACElxgtJhw1QnFz6IIPzzOf4QJYI06OwAC5TIAA-cvCK5J8Qz_LoGKHwQ",
+    "CAACAgUAAxkBAAIQbGC0mik81vkrndPPJ7Vif9yuCdkjAAIOAgACiMGhVWgNT2REBs36HwQ"
+]
+
+SEX_TEXT = (
+    "Yamete...... yamete kudasaiii!!",
+    "Sleeping alone is a waste of my sexual talent, Lets sleep together and have some fun",
+    "Ahhhhh\n*cums*\n please be gentle senpai",
+    "So you really wanna have some naughty stuff with me right?",
+    "Yea sure I can treat you better, like anyone else",
+    "You sure about that?|\nI mean am a bit shy you know",
+    "Can you really handle my pussy?",
+    "No Sex for you sorry to say",
+    "Ok.... But be gentle please",
+    "ahhh.... not there... ahhhh...",
+    "Lmao, Do you even have a dick?",
+    "ahhh moto moto ahhhh",
+    "Shut-up small dick kid!! Go do your homework"
+)
