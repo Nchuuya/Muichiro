@@ -101,12 +101,17 @@ QUOTES_IMG = (
 
 WAIFUS_PIC = (
     "ram",
-    "rem"
+    "rem",
+    "lucy heartfilia",
+    "kurumi tokisaki",
+    "saeko busujima",
+    "xenovia quarta",
     "asuna yuuki",
     "miku nakano",
     "emilia",
     "zero two",
     "tohru",
+    "erza scarlet",
     "natsunagi nagisa",
     "mai sakurajima",
     "makinohara",
@@ -137,6 +142,36 @@ WAIFUS_PIC = (
     "mikasa",
     "komi",
     "akeno himejima",
+    "luffy",
+    "roronoa zoro",
+    "garp",
+    "sengoku",
+    "shoto todoroki",
+    "deku",
+    "bakugo",
+    "oreki",
+    "chuuya nakahara",
+    "osamu dazai",
+    "dabi",
+    "edward newgate",
+    "black beard",
+    "sanji vinsmoke",
+    "corazon",
+    "vivi",
+    "naruto",
+    "kakashi",
+    "obito",
+    "chisaki",
+    "baji",
+    "manjiro sano",
+    "usopp",
+    "draken",
+    "hanma",
+    "kazutora",
+    "senju kawaragi",
+    "nami lewd",
+    "nico robin sexy",
+    "boa hancock sexy"
 )
 
 def shorten(description, info="anilist.co"):
@@ -1144,12 +1179,12 @@ dispatcher.add_handler(HAREM_HANDLER)
 dispatcher.add_handler(ANIME_HANDLER)
 dispatcher.add_handler(ANIME_STUFFS_HANDLER)
 dispatcher.add_handler(CHARACTER_HANDLER)
-dispatcher.add_handler(WAIFU_HANDLER)
+dispatcher.add_handler(GUESS_HANDLER)
 dispatcher.add_handler(MANGA_HANDLER)
 dispatcher.add_handler(AIRING_HANDLER)
 dispatcher.add_handler(USER_HANDLER)
 dispatcher.add_handler(UPCOMING_HANDLER)
-dispatcher.add_handler(PROTECC_HANDLER)
+dispatcher.add_handler(UWU_HANDLER)
 dispatcher.add_handler(KAIZOKU_SEARCH_HANDLER)
 dispatcher.add_handler(KAYO_SEARCH_HANDLER)
 dispatcher.add_handler(WATCHLIST_HANDLER)
@@ -1186,7 +1221,7 @@ __handlers__ = [
     KAYO_SEARCH_HANDLER,
     KAIZOKU_SEARCH_HANDLER,
     ANIMEQUOTES_HANDLER,
-    WAIFU_HANDLER,
-    PROTECC_HANDLER,
+    GUESS_HANDLER,
+    UWU_HANDLER,
     HAREM_HANDLER,
 ]
