@@ -15,7 +15,7 @@ from telegram import InlineKeyboardButton, InlineKeyboardMarkup, ParseMode, Upda
 from telegram.ext import CommandHandler, CallbackQueryHandler, CallbackContext
 from telegram.utils.helpers import mention_html
 
-from SiestaRobot import OWNER_ID, REDIS, dispatcher, pgram
+from SiestaRobot import OWNER_ID, REDIS, dispatcher
 from SiestaRobot.modules.disable import DisableAbleCommandHandler
 from SiestaRobot.modules.helper_funcs.alternate import typing_action
 from SiestaRobot.modules.helper_funcs.chat_status import callbacks_in_filters
