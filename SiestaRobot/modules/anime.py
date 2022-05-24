@@ -1000,59 +1000,7 @@ def animequotes(update: Update, context: CallbackContext):
     reply_photo(random.choice(QUOTES_IMG))
 
 
-@pgram.on_message(filters.command("watchorder"))
-def watchorderx(_, message):
-    anime = message.text.replace(message.text.split(" ")[0], "")
-    res = requests.get(
-        f"https://chiaki.site/?/tools/autocomplete_series&term={anime}"
-    ).json()
-    data = None
-    id_ = res[0]["id"]
-    res_ = requests.get(f"https://chiaki.site/?/tools/watch_order/id/{id_}").text
-    soup = BeautifulSoup(res_, "html.parser")
-    anime_names = soup.find_all("span", class_="wo_title")
-    for x in anime_names:
-        data = f"{data}\n{x.text}" if data else x.text
-    message.reply_text(f"Watchorder of {anime}: \n```{data}```")
 
-
-@pgram.on_callback_query(callbacks_in_filters('quotek'))
-def callback_quotek(_, query):
-    if query.data.split(":")[1] == "change":
-        #         query.message.delete()
-        kk = requests.get('https://animechan.vercel.app/api/random').json()
-        anime = kk['anime']
-        quote = kk['quote']
-        character = kk['character']
-        caption = f"""
-**Anime:** `{anime}`
-**Character:** `{character}`
-**Quote:** `{quote}`"""
-        query.message.edit(caption,
-                           reply_markup=InlineKeyboardMarkup([
-                               [
-                                   InlineKeyboardButton(
-                                       "Change", callback_data="quotek:change")
-                               ],
-                           ]))
-
-
-@pgram.on_message(filters.command('aquote'))
-def quote(_, message):
-    kk = requests.get('https://animechan.vercel.app/api/random').json()
-    anime = kk['anime']
-    quote = kk['quote']
-    character = kk['character']
-    caption = f"""
-**Anime:** `{anime}`
-**Character:** `{character}`
-**Quote:** `{quote}`"""
-    pgram.send_message(message.chat.id,
-                     caption,
-                     reply_markup=InlineKeyboardMarkup([[
-                         InlineKeyboardButton("Change",
-                                              callback_data="quotek:change")
-                     ]]))
 
 
 def waifu(update, context):
