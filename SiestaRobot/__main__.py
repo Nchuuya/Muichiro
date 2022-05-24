@@ -85,7 +85,7 @@ def get_readable_time(seconds: int) -> str:
     return ping_time
 
 
-SIESTA_IMG = "https://telegra.ph/file/6d3e3ef24f64fb6e35df0.jpg"
+SIESTA_IMG = "https://telegra.ph/file/0bd997f802acca9cd8953.mp4"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
  You can support the project by contacting @saint_foire \
@@ -202,8 +202,8 @@ def start(update: Update, context: CallbackContext):
 
         else:
             first_name = update.effective_user.first_name
-            update.effective_message.reply_photo(
-                random.choice(MIKU_IMG), 
+            update.effective_message.reply_video(
+                SIESTA_IMG, 
                 caption=gs(chat.id, "pm_start_text").format(                    
                     escape_markdown(first_name),
                     escape_markdown(uptime),
@@ -212,7 +212,7 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton(text=gs(chat.id, "help_button"), callback_data="help_back"),
+                            InlineKeyboardButton(text=gs(chat.id, "owner_button"), url="https://t.me/zerohisooka "),
                         ],
                         [
                             InlineKeyboardButton(text=gs(chat.id, "support_button"), url="https://t.me/BoaHancock_Support"),
@@ -622,7 +622,6 @@ def get_help(update: Update, context: CallbackContext):
         )
 
     else:
-        random.choice(MIKU_IMG),
         send_help(chat.id, (gs(chat.id, "pm_help_text")))
 
 
