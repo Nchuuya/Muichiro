@@ -169,9 +169,6 @@ WAIFUS_PIC = (
     "hanma",
     "kazutora",
     "senju kawaragi",
-    "nami lewd",
-    "nico robin sexy",
-    "boa hancock sexy"
 )
 
 def shorten(description, info="anilist.co"):
@@ -1062,7 +1059,7 @@ def guess(update, context):
             )
 
 @typing_action
-def uwu(update, context):
+def protecc(update, context):
     message = update.effective_message
     user = update.effective_user
     search = message.text.split(" ", 1)
@@ -1171,7 +1168,7 @@ QUOTE = DisableAbleCommandHandler("quote", quotes)
 CHANGE_QUOTE = CallbackQueryHandler(change_quote, pattern=r"change_.*", run_async=True)
 QUOTE_CHANGE = CallbackQueryHandler(change_quote, pattern=r"quote_.*", run_async=True)
 GUESS_HANDLER = CommandHandler("guess", guess, run_async=True)
-UWU_HANDLER = CommandHandler("uwu", uwu, run_async=True)
+PROTECC_HANDLER = CommandHandler("protecc", uwu, run_async=True)
 
 
 dispatcher.add_handler(BUTTON_HANDLER)
@@ -1184,7 +1181,7 @@ dispatcher.add_handler(MANGA_HANDLER)
 dispatcher.add_handler(AIRING_HANDLER)
 dispatcher.add_handler(USER_HANDLER)
 dispatcher.add_handler(UPCOMING_HANDLER)
-dispatcher.add_handler(UWU_HANDLER)
+dispatcher.add_handler(PROTECC_HANDLER)
 dispatcher.add_handler(KAIZOKU_SEARCH_HANDLER)
 dispatcher.add_handler(KAYO_SEARCH_HANDLER)
 dispatcher.add_handler(WATCHLIST_HANDLER)
@@ -1222,6 +1219,6 @@ __handlers__ = [
     KAIZOKU_SEARCH_HANDLER,
     ANIMEQUOTES_HANDLER,
     GUESS_HANDLER,
-    UWU_HANDLER,
+    PROTECC_HANDLER,
     HAREM_HANDLER,
 ]
