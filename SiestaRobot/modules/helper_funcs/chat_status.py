@@ -7,7 +7,7 @@ from pyrogram import filters
 from telegram import Chat, ChatMember, ParseMode, Update, User
 from telegram.ext import CallbackContext
 
-from Natsunagi import DEL_CMDS, DEMONS, DEV_USERS, DRAGONS, TIGERS, WOLVES, dispatcher
+from SiestaRobot import DEL_CMDS, DEMONS, DEV_USERS, DRAGONS, TIGERS, WOLVES, dispatcher
 
 ADMIN_CACHE = TTLCache(maxsize=512, ttl=60 * 10, timer=perf_counter)
 THREAD_LOCK = RLock()
