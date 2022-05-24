@@ -100,42 +100,43 @@ QUOTES_IMG = (
 )
 
 WAIFUS_PIC = (
-    "Ram",
-    "Rem"
-    "Asuna yuuki",
-    "Miku nakano",
-    "Emilia",
-    "Zero two",
-    "Tohru",
-    "Natsunagi nagisa",
-    "Mai sakurajima",
-    "Makinohara",
-    "Megumin",
-    "Kanna kamui"
-    "Umaru doma",
-    "Rikka takanashi",
-    "Enterprise",
-    "Sakura haruno",
-    "Hinata hyuuga",
-    "Kurumi tokisaki",
-    "Shinobu kochou",
-    "Nezuko kamado"
-    "Nami",
-    "Nico Robin",
-    "Boa Hancock",
-    "Viola",
-    "Yuno Gasai",
-    "Himawari uzumaki",
-    "Kaguya shinomiya",
-    "Kanae kochou",
-    "Yukinon",
-    "Marin",
-    "Siesta",
-    "Asia",
-    "Rias",
-    "Gabi",
-    "Mikasa",
-    "Komi",
+    "ram",
+    "rem"
+    "asuna yuuki",
+    "miku nakano",
+    "emilia",
+    "zero two",
+    "tohru",
+    "natsunagi nagisa",
+    "mai sakurajima",
+    "makinohara",
+    "megumin",
+    "kanna kamui"
+    "umaru doma",
+    "rikka takanashi",
+    "enterprise",
+    "sakura haruno",
+    "hinata hyuuga",
+    "kurumi tokisaki",
+    "shinobu kochou",
+    "nezuko kamado"
+    "nami",
+    "nico Robin",
+    "boa Hancock",
+    "viola",
+    "yuno Gasai",
+    "himawari uzumaki",
+    "kaguya shinomiya",
+    "kanae kochou",
+    "yukinon",
+    "marin",
+    "siesta",
+    "asia",
+    "rias",
+    "gabi",
+    "mikasa",
+    "komi",
+    "akeno himejima",
 )
 
 def shorten(description, info="anilist.co"):
@@ -1003,7 +1004,7 @@ def animequotes(update: Update, context: CallbackContext):
 
 
 
-def waifu(update, context):
+def guess(update, context):
     search = random.choice(WAIFUS_PIC)
     variables = {"query": search}
     json = requests.post(
@@ -1016,17 +1017,17 @@ def waifu(update, context):
         if image:
             image = image.get("large")
             update.effective_message.reply_photo(
-                photo=image, caption= f"*A waifu appeared!*\nAdd them to your harem by sending /protecc character name",
+                photo=image, caption= f"*A waifu/husbandro appeared!*\nGuessed Correctly and add them to your harem by sending /uwu character name",
                 parse_mode=ParseMode.MARKDOWN,
             )
         else:
             update.effective_message.reply_text(
-                "Oops Waifu Ran Away",
+                "Oops Waifu/Husbandro Ran Away",
                 parse_mode=ParseMode.MARKDOWN,
             )
 
 @typing_action
-def protecc(update, context):
+def uwu(update, context):
     message = update.effective_message
     user = update.effective_user
     search = message.text.split(" ", 1)
@@ -1046,7 +1047,7 @@ def protecc(update, context):
         char_name = f"{json.get('name').get('full')}"
         if search in WAIFUS_PIC:
             REDIS.sadd(f"anime_waifu{user.id}", search)
-            update.effective_message.reply_text(f"OwO you protecc'd {char_name}. This waifu has been added to your harem.")
+            update.effective_message.reply_text(f"OwO you guessed {char_name}. This waifu/husbandro has been added to your harem.")
         else:
             update.effective_message.reply_text("rip, that's not quite right...")
 
@@ -1082,7 +1083,7 @@ def fvrt_waifu(update, context):
            )
             os.remove(loml)
     else:
-        message.reply_text("You havn't added any waifu in your harem!")
+        message.reply_text("You havn't guessed any waifu/husbandro in your harem!")
 
 __help__ = """
 × `/anime <anime>`*:* returns information about the anime from AniList.
@@ -1134,8 +1135,8 @@ ANIMEQUOTES_HANDLER = DisableAbleCommandHandler(
 QUOTE = DisableAbleCommandHandler("quote", quotes)
 CHANGE_QUOTE = CallbackQueryHandler(change_quote, pattern=r"change_.*", run_async=True)
 QUOTE_CHANGE = CallbackQueryHandler(change_quote, pattern=r"quote_.*", run_async=True)
-WAIFU_HANDLER = CommandHandler("waifu", waifu, run_async=True)
-PROTECC_HANDLER = CommandHandler("protecc", protecc, run_async=True)
+GUESS_HANDLER = CommandHandler("guess", guess, run_async=True)
+UWU_HANDLER = CommandHandler("uwu", uwu, run_async=True)
 
 
 dispatcher.add_handler(BUTTON_HANDLER)
