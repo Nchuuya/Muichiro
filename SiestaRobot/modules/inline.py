@@ -17,7 +17,7 @@ from Anime_Inline.helper.errors import capture_err
 from Anime_Inline import OWNER_USERNAME, BOT_USERNAME, BOT_NAME, REDIS
 
 
-INLINE_PIC = ""
+INLINE_PIC = "https://telegra.ph/file/0167f11085e44f8bb8042.jpg"
            
 NEXT_OFFSET = 25
 
@@ -165,7 +165,7 @@ async def inline_query_handler(client, query):
                             parse_mode="markdown",
                             title=f"{json['title']['romaji']}",
                             description=f"{json['startDate']['year']}",
-                            reply_markup=buttons))8
+                            reply_markup=buttons))
                     else:
                         answers.append(InlineQueryResultArticle(
                             title=f"{json['title']['romaji']}",
