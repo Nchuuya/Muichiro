@@ -2,7 +2,7 @@ import aiohttp
 import requests
 
 from SiestaRobot.modules.anime import t
-from SiestaRobot import pgram as ANIME
+from SiestaRobot import pbot as ANIME
 from pyrogram import __version__
 from SiestaRobot.modules.anime import url, anime_query, manga_query, airing_query, character_query
 from pyrogram.types import (
