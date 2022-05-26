@@ -421,40 +421,7 @@ def owo(update: Update, context: CallbackContext):
 	    except BadRequest:
 	        owo_type = "Text"
 
-def uwuu(update: Update, context: CallbackContext):
-	bot = context.bot
-	args = context.args
-	message = update.effective_message
 
-	reply_to = message.reply_to_message or message
-
-	curr_user = html.escape(message.from_user.first_name)
-	user_id = extract_user(message, args)
-
-	if user_id:
-	    uwu_user = bot.get_chat(user_id)
-	    user1 = curr_user
-	    user2 = html.escape(uwu_user.first_name)
-
-	else:
-	    user1 = bot.first_name
-	    user2 = curr_user
-
-	uwu_type = random.choice(("Gif", "Sticker"))
-	if uwu_type == "Gif":
-	    try:
-	        temp = random.choice(fun_strings.UWU_GIFS)
-	        reply_to.reply_animation(temp)
-	    except BadRequest:
-	        uwu_type = "Text"
-
-	if uwu_type == "Sticker":
-	    try:
-	        temp = random.choice(fun_strings.UWU_STICKERS)
-	        reply_to.reply_sticker(temp)
-	    except BadRequest:
-	        uwu_type = "Text"
-	
 def sex(update: Update, context: CallbackContext):
     reply_text = update.effective_message.reply_to_message.reply_text if update.effective_message.reply_to_message else update.effective_message.reply_text
     reply_text(random.choice(fun_strings.SEX_TEXT))
@@ -478,7 +445,6 @@ GBAM_HANDLER = DisableAbleCommandHandler("gbam", gbam, run_async=True)
 ROMANCE_HANDLER = DisableAbleCommandHandler("romance", romance, run_async=True)
 OWO_HANDLER = DisableAbleCommandHandler("owo", owo, run_async=True)
 SEX_HANDLER = DisableAbleCommandHandler("sex", sex, run_async=True)
-UWUU_HANDLER = DisableAbleCommandHandler("uwuu", uwuu, run_async=True)
 
 dispatcher.add_handler(WEEBIFY_HANDLER)
 dispatcher.add_handler(SHOUT_HANDLER)
@@ -498,7 +464,6 @@ dispatcher.add_handler(EIGHTBALL_HANDLER)
 dispatcher.add_handler(TABLE_HANDLER)
 dispatcher.add_handler(GBAM_HANDLER)
 dispatcher.add_handler(OWO_HANDLER)
-dispatcher.add_handler(UWUU_HANDLER)
 dispatcher.add_handler(SEX_HANDLER)
 
 __mod_name__ = "Fun"
@@ -521,7 +486,6 @@ __command_list__ = [
     "shout",
     "weebify",
     "8ball",
-    "uwuu",
     "owo",
 ]
 __handlers__ = [
@@ -543,7 +507,6 @@ __handlers__ = [
     ROMANCE_HANDLER,
     WEEBIFY_HANDLER,
     SEX_HANDLER,	
-    UWUU_HANDLER,
     OWO_HANDLER,
     EIGHTBALL_HANDLER,
     GBAM_HANDLER,
