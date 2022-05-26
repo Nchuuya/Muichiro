@@ -170,6 +170,7 @@ WAIFUS_PIC = (
     "hanma",
     "kazutora",
     "senju",
+    "shikimori",
 )
 
 def shorten(description, info="anilist.co"):
