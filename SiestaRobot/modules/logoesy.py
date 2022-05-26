@@ -9,7 +9,7 @@ from PIL import Image, ImageDraw, ImageFont
 from SiestaRobot import OWNER_ID, telethn as tbot
 from SiestaRobot.events import register
 
-LOGO_LINKS = [
+LOGO_LINKS = (
     "https://telegra.ph/file/98bf31ab534bbaf75267a.jpg",
     "https://telegra.ph/file/d1838efdafce9fe611d0c.jpg",
     "https://telegra.ph/file/c1ff2d5ec5e1b5bd1b200.jpg",
@@ -645,7 +645,7 @@ LOGO_LINKS = [
     "https://telegra.ph/file/258c02c002e89287d5d9b.jpg",
     "https://telegra.ph/file/d2abc99773a9d4954c2ba.jpg",
     "https://telegra.ph/file/9849b3940f063b065f4e3.jpg",
-]
+)
 
 
 @register(pattern="^/logo ?(.*)")
