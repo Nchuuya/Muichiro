@@ -1168,7 +1168,7 @@ QUOTE = DisableAbleCommandHandler("quote", quotes)
 CHANGE_QUOTE = CallbackQueryHandler(change_quote, pattern=r"change_.*", run_async=True)
 QUOTE_CHANGE = CallbackQueryHandler(change_quote, pattern=r"quote_.*", run_async=True)
 GUESS_HANDLER = CommandHandler("guess", guess, run_async=True)
-PROTECC_HANDLER = CommandHandler("protecc", protecc, run_async=True)
+PROTECC_HANDLER = CommandHandler(["protecc", "uwu"], protecc, run_async=True)
 
 
 dispatcher.add_handler(BUTTON_HANDLER)
