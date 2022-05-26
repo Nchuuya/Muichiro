@@ -14,7 +14,7 @@ from pyrogram.types import (
 )
 
 from SiestaRobot.utils.errors import capture_err
-from SiestaRobot import OWNER_USERNAME, BOT_USERNAME, BOT_NAME, REDIS
+from SiestaRobot import OWNER_USERNAME, BOT_USERNAME, REDIS
 
 
 INLINE_PIC = "https://telegra.ph/file/0167f11085e44f8bb8042.jpg"
@@ -29,7 +29,7 @@ async def inline_query_handler(client, query):
         await client.answer_inline_query(query.id,
             results=[
                 InlineQueryResultPhoto(
-                    caption=f"Hello I'm {BOT_NAME} , I can help you to find everything about anime. You can use command or inline to using me 💜",
+                    caption=f"Hello I'm {BOT_USERNAME} , I can help you to find everything about anime. You can use command or inline to using me 💜",
                     photo_url=f"{INLINE_PIC}",
                     parse_mode="markdown",
                     title=f"Help?",
