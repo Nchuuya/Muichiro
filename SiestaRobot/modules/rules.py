@@ -1,9 +1,9 @@
 from typing import Optional
 
-import SiestaRobot.modules.sql.rules_sql as sql
-from SiestaRobot import dispatcher
-from SiestaRobot.modules.helper_funcs.chat_status import user_admin
-from SiestaRobot.modules.helper_funcs.string_handling import markdown_parser
+import TGN.modules.sql.rules_sql as sql
+from TGN import dispatcher
+from TGN.modules.helper_funcs.chat_status import user_admin
+from TGN.modules.helper_funcs.string_handling import markdown_parser
 from telegram import (
     InlineKeyboardButton,
     InlineKeyboardMarkup,
@@ -117,7 +117,7 @@ def clear_rules(update: Update, context: CallbackContext):
 
 
 def __stats__():
-    return f"× {sql.num_chats()} chats have rules set."
+    return f"• {sql.num_chats()} chats have rules set."
 
 
 def __import_data__(chat_id, data):
