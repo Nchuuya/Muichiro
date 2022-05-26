@@ -13,7 +13,7 @@ from pyrogram.types import (
     InlineQueryResultPhoto
 )
 
-from SiestaRobot.helper.errors import capture_err
+from SiestaRobot.utils.errors import capture_err
 from SiestaRobot import OWNER_USERNAME, BOT_USERNAME, BOT_NAME, REDIS
 
 
