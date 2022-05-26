@@ -421,7 +421,7 @@ def owo(update: Update, context: CallbackContext):
 	    except BadRequest:
 	        owo_type = "Text"
 
-def uwu(update: Update, context: CallbackContext):
+def uwuu(update: Update, context: CallbackContext):
 	bot = context.bot
 	args = context.args
 	message = update.effective_message
@@ -478,7 +478,7 @@ GBAM_HANDLER = DisableAbleCommandHandler("gbam", gbam, run_async=True)
 ROMANCE_HANDLER = DisableAbleCommandHandler("romance", romance, run_async=True)
 OWO_HANDLER = DisableAbleCommandHandler("owo", owo, run_async=True)
 SEX_HANDLER = DisableAbleCommandHandler("sex", sex, run_async=True)
-UWU_HANDLER = DisableAbleCommandHandler("uwu", uwu, run_async=True)
+UWUU_HANDLER = DisableAbleCommandHandler("uwuu", uwuu, run_async=True)
 
 dispatcher.add_handler(WEEBIFY_HANDLER)
 dispatcher.add_handler(SHOUT_HANDLER)
@@ -498,7 +498,7 @@ dispatcher.add_handler(EIGHTBALL_HANDLER)
 dispatcher.add_handler(TABLE_HANDLER)
 dispatcher.add_handler(GBAM_HANDLER)
 dispatcher.add_handler(OWO_HANDLER)
-dispatcher.add_handler(UWU_HANDLER)
+dispatcher.add_handler(UWUU_HANDLER)
 dispatcher.add_handler(SEX_HANDLER)
 
 __mod_name__ = "Fun"
@@ -521,7 +521,7 @@ __command_list__ = [
     "shout",
     "weebify",
     "8ball",
-    "uwu",
+    "uwuu",
     "owo",
 ]
 __handlers__ = [
@@ -543,7 +543,7 @@ __handlers__ = [
     ROMANCE_HANDLER,
     WEEBIFY_HANDLER,
     SEX_HANDLER,	
-    UWU_HANDLER,
+    UWUU_HANDLER,
     OWO_HANDLER,
     EIGHTBALL_HANDLER,
     GBAM_HANDLER,
