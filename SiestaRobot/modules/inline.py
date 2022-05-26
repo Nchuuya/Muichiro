@@ -13,8 +13,8 @@ from pyrogram.types import (
     InlineQueryResultPhoto
 )
 
-from Anime_Inline.helper.errors import capture_err
-from Anime_Inline import OWNER_USERNAME, BOT_USERNAME, BOT_NAME, REDIS
+from SiestaRobot.helper.errors import capture_err
+from SiestaRobot import OWNER_USERNAME, BOT_USERNAME, BOT_NAME, REDIS
 
 
 INLINE_PIC = "https://telegra.ph/file/0167f11085e44f8bb8042.jpg"
