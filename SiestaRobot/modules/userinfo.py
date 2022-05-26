@@ -269,7 +269,7 @@ def info(update: Update, context: CallbackContext):
     else:
         return
 
-    rep = message.reply_text("<code>wait why so horny...</code>", parse_mode=ParseMode.HTML)
+    rep = message.reply_text("<code>chotto matte...</code>", parse_mode=ParseMode.HTML)
 
     text = (
         f"╒═══「<b>• Results•</b> 」\n"
