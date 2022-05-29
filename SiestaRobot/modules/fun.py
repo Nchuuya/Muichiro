@@ -422,6 +422,19 @@ def owo(update: Update, context: CallbackContext):
 	        owo_type = "Text"
 
 
+def sex(update: Update, context: CallbackContext):
+    message = update.effective_message
+    name = (
+        message.reply_to_message.from_user.first_name
+        if message.reply_to_message
+        else message.from_user.first_name
+    )
+    reply_photo = (
+        message.reply_to_message.reply_photo
+        if message.reply_to_message
+        else message.reply_animation
+    )
+    reply_photo(random.choice(fun_strings.SEX_VIDS), caption=f" ♡(random.choice(fun_strings.SEX_XD)) {name}*")
 
 SANITIZE_HANDLER = DisableAbleCommandHandler("sanitize", sanitize, run_async=True)
 RUNS_HANDLER = DisableAbleCommandHandler("runs", runs, run_async=True)
@@ -441,6 +454,7 @@ WEEBIFY_HANDLER = DisableAbleCommandHandler("weebify", weebify, run_async=True)
 GBAM_HANDLER = DisableAbleCommandHandler("gbam", gbam, run_async=True)
 ROMANCE_HANDLER = DisableAbleCommandHandler("romance", romance, run_async=True)
 OWO_HANDLER = DisableAbleCommandHandler("owo", owo, run_async=True)
+SEX_HANDLER = DisableAbleCommandHandler("sex", sex, run_async=True)
 
 dispatcher.add_handler(WEEBIFY_HANDLER)
 dispatcher.add_handler(SHOUT_HANDLER)
@@ -460,7 +474,7 @@ dispatcher.add_handler(EIGHTBALL_HANDLER)
 dispatcher.add_handler(TABLE_HANDLER)
 dispatcher.add_handler(GBAM_HANDLER)
 dispatcher.add_handler(OWO_HANDLER)
-
+dispatcher.add_handler(SEX_HANDLER)
 
 __mod_name__ = "Fun"
 __command_list__ = [
@@ -504,4 +518,5 @@ __handlers__ = [
     SEX_HANDLER,	
     EIGHTBALL_HANDLER,
     GBAM_HANDLER,
+    SEX_HANDLER
 ]
