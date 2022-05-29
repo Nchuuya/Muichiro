@@ -433,9 +433,9 @@ def sex(update: Update, context: CallbackContext):
     reply_photo = (
         message.reply_to_message.reply_photo
         if message.reply_to_message
-        else message.reply_animation
+        else message.reply_photo
     )
-    reply_photo(random.choice(fun_strings.SEX_VIDS), caption=f" ♡,tf {name}*")
+    reply_photo(random.choice(fun_strings.SEX_VIDS), caption=f"♡ {tf} {name}*")
 
 SANITIZE_HANDLER = DisableAbleCommandHandler("sanitize", sanitize, run_async=True)
 RUNS_HANDLER = DisableAbleCommandHandler("runs", runs, run_async=True)
