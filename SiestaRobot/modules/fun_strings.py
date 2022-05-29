@@ -557,7 +557,7 @@ SEX_TEXT = (
     "No Sex for you sorry to say",
     "Ok.... But be gentle please",
     "ahhh.... not there... ahhhh...",
-    "Lmao, Do you even have a dick?",
-    "ahhh moto moto ahhhh",
-    "Shut-up small dick kid!! Go do your homework"
+    "Ahhh! WHY SO HARD 🥺",
+    "Give Fass Fass See My Pussy 😢",
+    "I am Horney and already cum 12th times so can u Satisfies me?👉👈"
 )
