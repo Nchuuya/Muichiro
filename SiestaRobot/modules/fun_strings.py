@@ -546,7 +546,7 @@ OWO_STICKERS = [
     "CAACAgUAAxkBAAIQbGC0mik81vkrndPPJ7Vif9yuCdkjAAIOAgACiMGhVWgNT2REBs36HwQ"
 ]
 
-SEX_TEXT = (
+SEX_XD = (
     "Yamete...... yamete kudasaiii!!",
     "Sleeping alone is a waste of my sexual talent, Lets sleep together and have some fun",
     "Ahhhhh\n*cums*\n please be gentle senpai",
@@ -560,4 +560,11 @@ SEX_TEXT = (
     "Ahhh! WHY SO HARD 🥺",
     "Give Fass Fass See My Pussy 😢",
     "I am Horney and already cum 12th times so can u Satisfies me?👉👈"
+)
+
+SEX_VIDS = (
+    "https://telegra.ph/file/2963ce3dbc2e6b151495a.jpg",
+    "https://telegra.ph/file/cd3dda2660133af0a5beb.jpg",
+    "https://telegra.ph/file/e9aa79d86a2a1dc9215ea.jpg",
+    "https://telegra.ph/file/d34153779446172e69dae.jpg"
 )
