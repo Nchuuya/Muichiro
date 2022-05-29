@@ -423,6 +423,7 @@ def owo(update: Update, context: CallbackContext):
 
 
 def sex(update: Update, context: CallbackContext):
+    tf=random.choice(fun_strings.SEX_XD)
     message = update.effective_message
     name = (
         message.reply_to_message.from_user.first_name
@@ -434,7 +435,7 @@ def sex(update: Update, context: CallbackContext):
         if message.reply_to_message
         else message.reply_animation
     )
-    reply_photo(random.choice(fun_strings.SEX_VIDS), caption=f" ♡(random.choice(fun_strings.SEX_XD)) {name}*")
+    reply_photo(random.choice(fun_strings.SEX_VIDS), caption=f" ♡,tf {name}*")
 
 SANITIZE_HANDLER = DisableAbleCommandHandler("sanitize", sanitize, run_async=True)
 RUNS_HANDLER = DisableAbleCommandHandler("runs", runs, run_async=True)
