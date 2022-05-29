@@ -69,8 +69,8 @@ ENUM_FUNC_MAP = {
     sql.Types.VIDEO.value: dispatcher.bot.send_video,
 }
 
-NAMI_IMG = "https://telegra.ph/file/0bd997f802acca9cd8953.mp4"
-NAMI_XD = "https://telegra.ph/file/9dfd1212b7dc0fc6b390b.jpg"
+NAMI_IMG = "https://telegra.ph/file/1a73924778901c994e1c1.mp4"
+NAMI_XD = "https://telegra.ph/file/1a73924778901c994e1c1.mp4"
 
 VERIFIED_USER_WAITLIST = {}
 CAPTCHA_ANS_DICT = {}
