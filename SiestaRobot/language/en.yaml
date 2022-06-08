@@ -11,21 +11,15 @@ set_chat_lang: "Great, using {} Language it is from now on!"
 pm_start_text: |
 
   *matte matte, {} ♡*
-  ♡ Iꜰ yᴏᴜ thɪnk ᴛʜᴀᴛ ɪ'ᴍ ᴊᴜꜱᴛ aɴᴏᴛʜᴇʀ ᴄᴜᴛᴇ ɢɪʀʟ, ᴛʜᴇɴ ʏᴏᴜ ' ʀᴇ ᴅᴇᴀᴅ ᴡʀᴏɴɢ!
- 
-  ♡ ɪ ᴀᴍ Nᴀᴍɪ ♡,  ɪ'ʟʟ hᴀᴠᴇ Mᴀᴘᴘᴇᴅ ᴏᴜᴛ ᴛʜᴇ eɴᴛɪʀᴇ Wᴏʀʟᴅ!
-  
-  New Features:
-  • Guess Waifu/Husbandro by /guess and guess them by /uwu
-  • Music Added 
-
+  I am [Muichiro Tokito](https://kimetsu-no-yaiba.fandom.com/wiki/Muichiro_Tokito) Mist Hashira to Manage your Group with 
+  My Demon Slayer Abilities 
   _______________________________
   • *ᴜᴘᴛɪᴍᴇ:* {}
 
   • {} *ᴜꜱᴇʀ, ᴀᴄʀᴏꜱꜱ* {} *ᴄʜᴀᴛꜱ*
   _______________________________
   
-  ∆ type help to know more
+  ∆ type /help to know more
    
 group_start_text: |
   *𝚂𝚘𝚛𝚛𝚢, 𝚋𝚞𝚝 𝙸 𝚍𝚘𝚗'𝚝 𝚑𝚊𝚟𝚎 𝚝𝚒𝚖𝚎 𝚝𝚘 𝚏𝚘𝚘𝚕 𝚊𝚛𝚘𝚞𝚗𝚍 𝚠𝚒𝚝𝚑 𝚢𝚘𝚞!*
@@ -70,7 +64,7 @@ pm_about_credit_text: |
 
   Here Developers Making And Give Inspiration For Made The Boa Robot
 pm_help_text: |
-  *✺ I am Nami ♡ Smartest memeber of Strawhat Crew here to manage ur Crew with My abilities I can Forecast before it happened so feel free , To lnow more See my abilities in detail by clicking them ✺*
+  *✺ I am Muichiro Tokito Mist Hashira Click to see my Demon Slayer Mark Abilities ✺*
 pm_help_module_text: "Here is the help for the *{}* module :\n\n"
 
 # Group Help Text
@@ -91,7 +85,7 @@ group_settings_button: "Settings"
 
 # PM Button
 add_bot_to_group_button: "𝐀𝐝𝐝 𝐁𝐨𝐚 𝐇𝐚𝐧𝐜𝐨𝐜𝐤 𝐓𝐨 𝐆𝐫𝐨𝐮𝐩"
-xd_button: "ᴀᴅᴅ N𝚊𝚖𝚒 ♡ ᴛᴏ ʏᴏᴜʀ"
+xd_button: "ᴀᴅᴅ Muichiro Tokito ♡ ᴛᴏ ʏᴏᴜʀ"
 
 
 support_chat_link_button: "𝐒𝐮𝐩𝐩𝐨𝐫𝐭"
@@ -100,11 +94,11 @@ notes_button: "𝐍𝐨𝐭𝐞𝐬"
 source_button: "𝐒𝐨𝐮𝐫𝐜𝐞 𝐂𝐨𝐝𝐞"
 
 
-help_button: "ʜᴇʟᴘ ♡"
-updates_button: "ᴜᴘᴅᴀᴛᴇꜱ ♡ "
-animechat_button: "ᴀɴɪᴍᴇ ᴄʜᴀᴛ 💠"
-support_button: "ꜱᴜᴘᴘᴏʀᴛ ♡"
-owner_button: "ᴋᴀᴢᴜᴛᴏʀᴀ ʜᴀɴᴇᴍɪʏᴀ ♡"
+help_button: "ʜᴇʟᴘ"
+updates_button: "ᴜᴘᴅᴀᴛᴇꜱ"
+animechat_button: "ᴀɴɪᴍᴇ ᴄʜᴀᴛ"
+support_button: "ꜱᴜᴘᴘᴏʀᴛ"
+owner_button: "ᴋᴀᴢᴜᴛᴏʀᴀ ʜᴀɴᴇᴍɪʏᴀ"
 
 # MODULES
 admin_help: |
