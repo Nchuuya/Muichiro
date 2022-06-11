@@ -1,9 +1,9 @@
 <h2 align="center">
-    ──「 Nami IS A MODULAR BOT WITH ONE PIECE THEME 」──
+    ──「 Muichiro Tokito IS A MODULAR BOT 」──
 </h2>
 
 <p align="center">
-  <img src="https://telegra.ph/file/fde11ba1834fb150e9gf48.jpg">
+  <img src="https://telegra.ph/file/bcd9adfe3bc37e6586bad.jpg">
 </p>
 
 <p align="center">
@@ -19,14 +19,14 @@
 </p>
 
 <p align="center">
-  <img src="https://telegra.ph/file/356bcd1e0c9e2231223gab.jpg">
+  <img src="https://telegra.ph/file/bcd9adfe3bc37e6586bad.jpg">
 </p>
 
 <h2 align="center">
     ──「 DEPLOY ON HEROKU 」──
 </h2>
 
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/Nchuuya/Nami"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-purple?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/Nchuuya/Muichiro"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-purple?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
 
 
 <h2 align="center">
