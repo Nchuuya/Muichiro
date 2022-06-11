@@ -9,7 +9,7 @@
          "naorobot"
       ],
     
-   "logo":    "https://telegra.ph/file/566d0f3fb2107bd8ecb27.jpg",  
+   "logo":    "https://telegra.ph/file/8ddbc0dd32af976e44e42.jpg",  
    "repository": "https://github.com/Nchuuya/Sanji", 
 
    "buildpacks": [
@@ -24,7 +24,7 @@
       "TOKEN": {
          "description": "Your bot token. Get one from @BotFather duh",
          "required": true,
-         "value": "5221164969:AAFVR6tIFOwtvoBSS1dCrNUBXhxlzBrGxDU"
+         "value": "5594448297:AAEl7GaoA8XDhJvZg5_VWy3EBLHNBptiISI"
       },
       "API_ID": {
          "description": "Get API_ID from my.telegram.org, used for telethon based modules.",
