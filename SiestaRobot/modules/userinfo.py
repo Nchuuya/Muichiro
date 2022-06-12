@@ -316,16 +316,16 @@ def info(update: Update, context: CallbackContext):
     disaster_level_present = False
 
     if user.id == OWNER_ID:
-        text += "\n\nThis person is  'Crew Caption'."
+        text += "\n\nThis person is  'Lord'."
         disaster_level_present = True
     elif user.id in DEV_USERS:
-        text += "\n\nThis user is 'Crew Member'."
+        text += "\n\nThis user is 'Hashira'."
         disaster_level_present = True
     elif user.id in DRAGONS:
-        text += "\n\nThis person is 'Nakama'."
+        text += "\n\nThis person is 'Kinoe'."
         disaster_level_present = True
     elif user.id in DEMONS:
-        text += "\n\nThis person is 'Bounty Hunter'."
+        text += "\n\nThis person is 'Kinoe'."
         disaster_level_present = True
     elif user.id in TIGERS:
         text += "\n\nThis person is 'My Hubbie'."
@@ -451,13 +451,13 @@ def stats(update, context):
     status += "*♡ python-Telegram-Bot:* " + str(ptbver) + "\n"
     status += "*✦ Uptime:* " + str(botuptime) + "\n"
     try:
-        update.effective_message.reply_photo(
-            MIKU_IMG,
+        update.effective_message.reply_text(
+            
             status
             + "\n*Bot statistics*:\n"
             + "\n".join([mod.__stats__() for mod in STATS])
-            + f"\n\n[✦ Support](https://t.me/{SUPPORT_CHAT}) | [✦ Updates](https://t.me/boa_updates)\n\n"
-            + "\n╘══「 by [Kazutora ♡](https://t.me/zer0hisoka) 」\n",
+            + f"\n\n[✦ Support](https://t.me/{SUPPORT_CHAT}) | [✦ Updates](https://t.me/MuichiroXupdates)\n\n"
+            + "\n╘══「 by [Kazutora ♡](https://t.me/zerohisooka) 」\n",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
                 [
