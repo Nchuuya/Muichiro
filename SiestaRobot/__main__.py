@@ -212,15 +212,14 @@ def start(update: Update, context: CallbackContext):
                 reply_markup=InlineKeyboardMarkup(
                     [
                         [
-                            InlineKeyboardButton(text=gs(chat.id, "owner_button"), url="https://t.me/zerohisooka "),
+                            InlineKeyboardButton(text=gs(chat.id, "xd_button"), url="https://t.me/MuichiroXrobot?startgroup=new"),
                         ],
                         [
                             InlineKeyboardButton(text=gs(chat.id, "support_button"), url="https://t.me/BoaHancock_Support"),
-                            InlineKeyboardButton(text=gs(chat.id, "xd_button"), url="https://t.me/namiirobot?startgroup=new"),
                             
                         ],
                         [
-                            InlineKeyboardButton(text=gs(chat.id, "updates_button"), url="https://t.me/nami_updates"),
+                            InlineKeyboardButton(text=gs(chat.id, "updates_button"), url="https://t.me/MuichiroXUpdates"),
                             
                         ]
 
